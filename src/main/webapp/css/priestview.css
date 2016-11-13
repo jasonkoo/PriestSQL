@@ -1,0 +1,1558 @@
+
+/*desReport部分的css样式*/
+.vertical-line{
+    width:2px;
+    height: 50px;
+    background: #cccccc;
+}
+
+.desReport-menus{
+    box-sizing: border-box;
+    background: #fafafa;
+    height:100px;
+    box-shadow:3px 3px 5px rgba(0,0,0,.1);
+}
+
+.desReport-menu{
+    float: left;
+}
+.desReport-menu-icons{
+    width:50px;
+    height:40px;
+    margin:10px 0px 10px 0px;
+    float: left;
+    text-align: center;
+    cursor: pointer;
+}
+.desReport-menus:first-child{
+    padding-left:10px;
+}
+
+.icon-warp-box{
+}
+.chart-menu-icons{
+    width: 40px;
+    margin:0px 5px;
+    height:auto;
+}
+.desReport-menu-icon{
+    position: relative;
+    /*cursor:move;*/
+    margin-left:-3px;
+}
+.drag-item{
+    cursor:move;
+}
+.menu-warpBox{
+    padding:5px 0px 3px 0px;
+    border:1px solid transparent;
+    box-sizing: border-box;
+}
+.menu-warpBox:hover{
+    /*background:#E1EEFE;
+    border:1px solid #D1E5FF;
+    -webkit-box-shadow:inset 0px 0px 5px rgb(225,238,254);
+    -moz-box-shadow:inset 0px 0px 5px rgb(225,238,254);
+    box-shadow:inset 0px 0px 5px rgb(225,238,254);*/
+    background:#E1EEFE;
+    border:1px solid #D1E5FF;
+    -webkit-box-shadow:inset 0px 0px 5px rgb(225,238,254);
+    -moz-box-shadow:inset 0px 0px 5px rgb(225,238,254);
+    box-shadow:inset 0px 0px 5px rgb(225,238,254);
+}
+
+.menu-warpBox:active{
+    background:#E1EEFE;
+    border:1px solid #D1E5FF;
+    -webkit-box-shadow:inset 0px 0px 5px rgb(225,238,254);
+    -moz-box-shadow:inset 0px 0px 5px rgb(225,238,254);
+    box-shadow:inset 0px 0px 5px rgb(225,238,254);
+}
+
+.desReoprt-menu-layouticon{
+    margin-top:5px;
+}
+.desReport-icon-name{
+    margin-top:3px;
+    font-size:13px;
+}
+.desReport-menu-name{
+    padding:5px;
+    text-align: center;
+    color: #6a7175;
+    clear: both;
+    margin-left:-35px;
+}
+.vertical-line{
+    float: left;
+    height:50px;
+    width:1px;
+    background: #ddd;
+    margin:15px 20px 5px 20px
+
+}
+.chartInfr{
+    position: absolute;
+    left:50px;
+    width:140px;
+    padding:10px;
+    /*height:200px;*/
+    top:0px;
+    background:#fff;
+    /*border:1px solid #e5e5e5;*/
+    box-shadow:0px 0px 5px rgba(0,0,0,.5);
+    -moz-box-shadow:0px 0px 5px rgba(0,0,0,.5);
+    -ms-box-shadow:0px 0px 5px rgba(0,0,0,.5);
+    -webkit-box-shadow: 0px 0px 5px rgba(0,0,0,.5);;
+    z-index:20;
+}
+.widget-input{
+    height: 30px;
+    width: 98%;
+    margin: 5px auto;
+}
+.text-edit-area{
+    padding:0px 5px;
+    height:30px;
+    line-height: 30px;
+    border:1px solid #dddddd;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.chartInfr-name{
+    margin:0px 0px 10px 0px;
+    text-align: left;
+    font-size:14px;
+    font-weight:bold;
+}
+.chart-menu-small-icons{
+    padding-left: 10px;
+    height:30px;
+}
+.chartInfr-detail{
+    margin:0px;
+    text-align: left;
+}
+.chartInfr-img{
+    width:50px;
+    height: 50px;
+}
+.chartInfr-detail-intro{
+    width:70px;
+    height:50px;
+}
+.style-title-name{
+    color: #000;
+    font-size:13px;
+}
+.style-list-name{
+    color: #8F8F8F;
+    font-size:13px;
+}
+
+
+.report-title-name{
+    height:30px;
+    line-height:30px;
+    margin:0px;
+    padding:0px;
+    font-size:14px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.no-have-share-title{
+    font-size:13px;
+}
+.report-oper-date{
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+
+.tab-pane-box{
+    margin:10px 10px;
+}
+.tab-pane-box-check{
+    border:1px solid #ddd;
+    height:130px;
+    overflow-y: scroll;
+}
+.tab-pane-checkbox{
+    margin:5px 10px;
+}
+.tab-pane-box-name{
+    margin:5px 0px;
+}
+.desReport-content{
+    /*margin-right:10px;*/
+}
+.desReport-content-canvas{
+    background: #c0c2cc;
+    height:1000px;
+    overflow-y: scroll;
+}
+.desReport-main-content{
+    margin: 20px 50px;
+    min-height:1000px;
+    height:5000px;
+    background: #F6F6F7;
+    box-shadow: 0px 0px 5px rgba(0,0,0,.2);
+}
+
+.desReport-conent-tab-header{
+    background: #EdEef0;
+}
+#desReport-content-tab-nav li{
+    margin:5px 0px 0px 0px;
+    border:none!important;
+}
+#desReport-content-tab-nav li a{
+    color: #939394;
+}
+#desReport-content-tab-nav li.active a{
+    color: #000;
+}
+.flexible-icon{
+    float: left;
+    width:30px;
+    height:20px;
+    line-height:35px;
+    background-position:70px -225px;
+    cursor: pointer;
+}
+.flexible-full-screen{
+    background-position:70px -265px;
+}
+.flexible-nofull-screen{
+    background-position:70px -310px;
+}
+.chooseDataSoure-select{
+    width:100%;
+    height:30px;
+}
+
+.input-chooseDataSoure, .dropdownClass{
+    border:1px solid #dddddd;
+    position: relative;
+    height:30px;
+    width:100%;
+    line-height:30px;
+    padding-left: 5px;
+}
+.dropdownClass{
+
+}
+.dropdownClass-choose-position-list{
+    width:50px;
+    margin-left:6px;
+}
+.dropdown-choose-positon{
+    width:100px;
+    margin-left:6px;
+}
+.checkBox-name{
+    margin-left:-8px;
+}
+.caret-position{
+    position: absolute;
+    right:5px;
+    top:50%;
+}
+.chooseDataSourceBox{
+    width:100%;
+    height: 150px;
+    overflow-y: scroll;
+}
+.dataSourceLi{
+    cursor: pointer;
+    width:100%;
+    padding:5px 0px 5px 5px;
+    margin:0px;
+}
+.dataSourceLi:hover{
+    background:#e5e5e5;
+}
+
+.chartWarpBox{
+    padding-top:5px;
+    width:250px;
+}
+.icon-small{
+    height: 24px !important;
+    margin-top:8px!important;
+}
+
+.position_relative{
+    position: relative;
+}
+.tab-pane-checkbox{
+    padding:5px 0px;
+    margin:0px;
+}
+.checkbox-choose{
+    width:31px;
+    /*z-index:10;*/
+    opacity:0;
+
+}
+.checkbox-icon{
+    display: inline-block;
+    position: absolute;
+    left:0px;
+    top:0px;
+    background-color:transparent;
+    margin-top:6px;
+}
+
+.align-left, .align-right{
+    border:1px solid #dddddd;
+    height:30px;
+    line-height:30px;
+}
+.align-left, .align-right, .align-center{
+    /*width:100px;*/
+    text-align: center;
+
+}
+.align-center{
+    border-top:1px solid #dddddd;
+    border-bottom:1px solid #dddddd;
+    height:30px;
+    line-height:30px;
+}
+.align-center-icon, .align-left-icon, .align-right-icon, .align-left-icon-hover, .align-right-icon-hover, .align-center-icon-hover{
+    margin:0px auto;
+    margin-top:3px;
+}
+.align{
+    width:33.3%;
+}
+.alignActive{
+    background-color: #dddddd;
+
+}
+.align-left-icon{
+    background-position: -20px -12px;
+}
+.align-left-icon-hover{
+    background-position:-58px -12px
+}
+.align-center-icon{
+    background-position: -20px -38px;
+}
+.align-center-icon-hover{
+    background-position: -58px -38px;
+}
+.align-right-icon{
+    background-position: -20px -65px;
+}
+.align-right-icon-hover{
+
+    background-position: -58px -65px;
+}
+.style-icon{
+    margin-top:0px;
+    /*margin-left:-6px;*/
+}
+.checkbox-notCheck{
+    background-position:69px -60px;
+}
+.checkbox-checked{
+
+
+    background-position:69px -18px;
+
+
+}
+.column-row-inner{
+    height: 35px;
+    display: inline-block;
+    line-height: 30px;
+    margin-right: 5px;
+}
+.columnOrRowInput{
+    width:230px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.exchange-icon{
+    float: right;
+    margin:0px 30px 10px 0px;
+}
+.column-input{
+    background-position:-25px -90px;
+}
+.row-input{
+    background-position:-25px -113px;
+}
+.exchange-icon{
+    background-position:-25px -170px;
+    cursor: pointer;
+}
+.column-row-input{
+    width:250px;
+    height:30px;
+    border:1px dotted #ccc;
+    position: relative;
+}
+.eraser{
+    position: absolute;
+    right: 0px;
+    top:0px;
+    background-position:-25px -140px;
+    cursor: pointer;
+}
+.inputNumber{
+    width:100%;
+    height:30px;
+}
+.title-height{
+    width:20%;
+    height:30px;
+    line-height:30px;
+    margin-right:5px;
+
+}
+.input-number{
+    width:76%;
+}
+.input-number-icon{
+    width:100%;
+    position: relative;
+}
+.increase-icon, .decrease-icon{
+    height:15px;
+    background-color:#dddddd;
+    position: absolute;
+    right:0px;
+}
+.increase{
+    top:0px;
+    background-position:-20px -286px;
+}
+.increaseHover{
+    top:0px;
+    background-position:-56px -286px;
+}
+.decrease{
+    bottom:0px;
+    background-position:-20px -310px;
+}
+.decreaseHover{
+    bottom:0px;
+    background-position:-56px -310px
+}
+.recommendChart{
+}
+.showOrhidden{
+    float: right;
+    cursor: pointer;
+    background-position: 70px -102px;
+}
+.dottomBorder{
+    width:200px;
+    border:1px dotted #dddddd;
+}
+.noBorder{
+    border:none;
+    padding-left: 5px;
+    width: 100%;
+    height:25px;
+
+}
+.flexBox{
+    position: fixed;
+    right:0px;
+    width:10px;
+    height:100%;
+    background: #E3E4E8;
+    padding-top: 20%;
+}
+.flexBox-icon{
+    width:10px;
+    height:100px;
+    background:#72A4E3;
+    padding:45px 0px;
+}
+.flexCaret{
+    width:0px;
+    height:0px;
+    content:"";
+    border:4px solid transparent;
+    border-right-color: #fff;
+}
+
+
+/*仪表盘画图区*/
+.chartFile{
+    margin: 0px;
+    padding:0px;
+}
+
+
+.chartFile-heading{
+    text-align: center;
+    height:30px;
+    line-height:30px;
+    background: #EdEef0;
+    border-bottom:1px solid #e3e3e4;
+}
+.chartFile-panel{
+    padding: 20px;
+}
+.chartPanel-container>.preview-lst{
+    min-height:1000px;
+}
+.chartPanel{
+    box-sizing: border-box;
+    margin:0 0 20px 0;
+    position: relative;
+    border:1px solid #EDEEF0;
+}
+.chartPanel:hover{
+    border:1px solid #FF9600;
+}
+.chartPanel.active{
+    border:1px solid #00a8ff;
+}
+.chartPanel-heading{
+    background: #EDEEF0;
+    height:30px;
+    padding:0px 5px;
+    line-height:30px;
+}
+.chartPanel-heading-input{
+    height:30px;
+    padding:0px 5px;
+    line-height:30px;
+}
+.chartPanel-heading-input input{
+    height:25px;
+    width:150px;
+    -webkit-border-radius:0px;
+    -moz-border-radius:0px;
+    border-radius:0px;
+    border:1px solid #DCDDDF;
+}
+.chartPanel.active>.chartOper-icon{
+    display:block;
+}
+.chartOper-icon{
+    position: absolute;
+    top:-26px;
+    right: 0px;
+    display:none;
+    background: #B2BBC6;
+    cursor: pointer;
+    height:25px;
+    width:60px;
+}
+.drag-chart-icon{
+    background-position: -424px -355px;
+}
+.delete-chart-icon{
+    background-position: -424px -397px;
+}
+.chartPanel-body{
+    height:350px;
+    overflow:hidden;
+}
+.chartPanelInner{
+    /*overflow: hidden;*/
+}
+.chartPanel-body div{
+    overflow: hidden;
+}
+.saveReportName{
+    width:300px!important;
+}
+
+.drag-item{
+    /*cursor: move;*/
+}
+/* 表格布局 */
+.chartPanel-container[data-type="grid"] {
+    border-style: solid;
+    border-width: 10px 0;
+    border-image-source: url(../images/content_bb.svg);
+    border-image-slice: 10;
+    border-image-repeat: repeat
+}
+.chartPanel-container[data-type="grid"] .grid-row{
+    display: flex;
+    position: relative;
+    min-height: 60px;
+    width: 100%;
+    border-style: solid;
+    border-width: 0 10px;
+    border-image-source: url(../images/content_bb.svg);
+    border-image-slice: 10;
+    border-image-repeat: repeat
+}
+
+.chartPanel-container[data-type="grid"] .grid-row .grid-con {
+    vertical-align: top;
+    width: 50%;
+    border-style: solid;
+    border-width: 0 10px;
+    border-image-source: url(../images/content_bb.svg);
+    border-image-slice: 10;
+    border-image-repeat: repeat
+}
+.chartPanel-container[data-type="grid"] .grid-con:hover {
+    outline: #4f80ff dashed 1px
+}
+.chartPanel-container[data-type="grid"] .grid-con:first-child {
+    border-left-width: 0
+}
+.chartPanel-container[data-type="grid"] .grid-con:last-child {
+    border-right-width: 0
+}
+.chartPanel-container[data-type="grid"] .chartPanel:first-child {
+    margin-top: 0
+}
+.chartPanel-container[data-type="grid"] .grid-row>.grid-handle {
+    display: none
+}
+.chartPanel-container[data-type="grid"] .grid-handle {
+    display: table-cell;
+    visibility: hidden;
+    position: absolute;
+    height: 100%;
+    width: 5px;
+    top: 0;
+    left: 50%;
+    cursor: w-resize;
+    transform: translateX(-6px)
+}
+/*.chartPanel.active .chartPanel-container[data-type="grid"] .grid-handle{
+    visibility: visible;
+}*/
+.chartPanel-container[data-type="grid"] .grid-dragbar {
+    position: relative;
+    top: 50%;
+    left: 2px;
+    width: 1px;
+    height: 20px;
+    transform: translateY(-50%);
+    border-left: 1px solid #5693E9!important
+}
+.grid-row .grid-con .chartPanel,
+.tab-panel .tab-content .chartPanel{
+    margin:10px 0 0 0;
+}
+
+.pivotTable{
+    /*width:1900px;*/
+}
+.pivotTable div{
+    width:300px;
+    float: left;
+}
+.pivotTable div span{
+    /*// width:50px!important;*/
+    float: left;
+    text-align: center;
+}
+input:-webkit-autofill{
+    background-color:red!important;
+}
+.widget-fliter-warp{
+    border:1px dotted transparent;
+}
+.widget-fliter-warp:hover{
+    border:1px dotted #00a8ff;
+}
+.widget-preview{
+    border: 1px solid #D3CFCF;
+    height: 30px;
+    width: 98%;
+    margin: 5px auto;
+}
+.inputFilter{
+    margin: 1px;
+    background: transparent;
+    border: none;
+    outline: navajowhite;
+}
+.innerSpan{
+    height: 25px;
+    line-height:28px;
+    margin:2px;
+    background:#00a8ff;
+    border-radius: 2px;
+    color: #FFFFFF;
+    padding:2px 5px;
+}
+.fliterResultLi{
+    height:195px;
+    overflow: scroll;
+    width:98%;
+    box-sizing: border-box;
+}
+.fliterResultLi li{
+    text-align: center;
+    border-bottom:1px solid #dddddd;
+    height:25px;
+    line-height:25px;
+}
+.filterTitle{
+    width: 20%;
+    text-align: center;
+}
+.filterText{
+    line-height:30px;
+}
+.filterWhere{
+    width:100%;
+}
+.fliter-list{
+    border-left:1px solid #dddddd;
+    border-right:1px solid #dddddd;
+    border-top:none;
+    border-bottom:none;
+    line-height: 29px;
+    text-align: center;
+}
+.filterBox{
+    clear: both;
+    margin:10px auto;
+    border:1px solid #D3CFCF;
+    width:98%;
+    margin:0px auto;
+}
+.filterInner{
+    width:100%;
+    height:25px;
+    line-height:25px;
+    border-color:#0EC4F1
+
+}
+.filterTitle{
+    margin:0px 5px;
+    height:25px;
+    line-height:25px;
+}
+.inputFilter{
+    /*width:60%;*/
+    line-height:20px;
+    padding:2px 0px;
+    margin:0px 5px;
+}
+.inputFilter input{
+    width:100%;
+    border:none;
+    color: #000;
+    background: transparent;
+    outline:none;
+}
+.input:focus{
+    border:none;
+}
+.filterBtnWarp{
+    display: none;
+    text-align: center;;
+}
+.fliterBtn{
+    margin:10px 0px;
+}
+.blueBtn{
+    background: #00a8ff;
+    color: #fff;
+
+}
+.preview-input{
+    border-left:none;
+    border-bottom:none;
+    border-right:none;
+}
+
+
+/* tab布局 */
+.tab-panel .tab-nav{
+    background:#f4f4f4;
+    margin:0;
+    border-bottom:1px solid #eee;
+}
+.tab-panel .tab-nav li{
+    display: inline-block;
+    vertical-align: top;
+    min-width: 80px;
+    margin-bottom: -1px;
+}
+.tab-panel .tab-nav li a{
+    display: inline-block;
+    height: 40px;
+    line-height: 40px;
+    width: 100%;
+    text-align: center;
+}
+.tab-panel .tab-nav li.active a{
+    background:#fff;
+    margin-bottom: -1px;
+    border-left: 1px solid #eee;
+    border-right: 1px solid #eee;
+}
+.tab-panel .tab-nav li:first-child{
+    border-left: 0;
+}
+.tab-panel .tab-content>div{
+    display:none;
+    min-height: 100px;
+    padding: 0 10px;
+    border:1px solid #fff;
+    background-color: #fff;
+}
+.tab-panel .tab-con.active{
+    display:block;
+}
+/*保存成功提示框*/
+.saveSuccessBox{
+    height:40px;
+    line-height:40px;
+    width:300px;
+    position: absolute;
+    left:0px;
+    top:135px;
+    background: #FFF9EA;
+    border:1px solid #FFDA78;
+    color: #FF943B;
+    text-align: center;
+    -webkit-box-shadow: 2px 2px 3px rgba(0,0,0,.3);
+    -moz-box-shadow: 2px 2px 3px rgba(0,0,0,.3);
+    box-shadow: 2px 2px 3px rgba(0,0,0,.3);
+}
+
+
+
+/*myReport page*/
+.createOwnReport{
+
+}
+.createOwnReportBox{
+    margin:10px 0px;
+    width:175px;
+    height:200px;
+    color:#4B8EE2;
+    text-align:center;
+    position: relative;
+}
+.createReport-imgicon:hover{
+    background-color: rgb(225,238,254);
+}
+.createReport-imgicon{
+    width:90%;
+    height:95%;
+    background:url("../images/createReport.png");
+    background-size:contain;
+    background-repeat:no-repeat;
+}
+.createReport-name{
+    position: absolute;
+    left:35%;
+    bottom:40px;
+}
+
+.myReportContent{
+    /*background: #f2f2f2;*/
+    min-height:600px;
+    height:2000px;
+    width:100%;
+}
+.myReportContent-main{
+    width:1024px;
+    margin:0px auto;
+}
+.myReport-own-report{
+    height:300px;
+}
+.myReport-report-header{
+    border-bottom:1px solid #d2d5db;
+    padding-bottom:5px;
+    margin-top:10px;
+    padding:10px 0px;
+    position: relative;
+}
+.buleline{
+    width:100px;
+    height:2px;
+    display: inline-block;
+    position: absolute;
+    left:0px;
+    bottom:-1px;
+    background:#24afff;
+}
+.myReportWarpBox{
+    width:1024px;
+    overflow-x: hidden;
+    overflow-y:visible;
+}
+.prev-report-icon-position{
+    background-position:-23px -190px;
+}
+.prev-report-icon-position-hover{
+    background-position:-58px -190px;
+}
+.myReportWarpBoxInner{
+    width:200000px;
+    overflow:hidden;
+    transition:all 1s;
+    -moz-transition:all 1s; /* Firefox 4 */
+    -webkit-transition:all 1s; /* Safari and Chrome */
+    -o-transition:all 1s; /* Opera */
+}
+.myReport-report-li{
+    margin:20px 0px;
+}
+.myReport-own-report{
+    position: relative;
+}
+
+.myReport-report-li-box{
+    position:relative;
+    width:160px;
+    margin-right:56px;
+    height:220px;
+    margin-bottom:10px;
+    margin-top:10px;
+}
+.myReport-report-li-box:nth-child(6){
+}
+.lastmyReport{
+    margin-right:0px;
+}
+
+
+.report-top-box{
+    width:100%;
+    padding:7px 7px;
+    background:#fff;
+    position: relative;
+    z-index:20;
+    /*  background-image: url(../images/reportList.png);
+      -webkit-background-size:contain;*/
+    background-size:contain;
+    -webkit-box-shadow: 0px 0px 5px rgba(0,0,0,.2);
+    -moz-box-shadow:0px 0px 5px rgba(0,0,0,.2);
+    box-shadow:0px 0px 5px rgba(0,0,0,.2);
+}
+.not-have-box-shadow{
+    -webkit-box-shadow: none;
+    -moz-box-shadow:none;
+    box-shadow:none;
+}
+.report-img{
+    width:100%;
+    margin:0px auto;
+    height:130px;
+    background: #00a8ff;
+}
+.notHaveShareReportImg{
+    background-image: url(../images/notHaveShareRe.png);
+    background-repeat:no-repeat;
+    background-position:-10px -16px;
+
+}
+
+.graycolor{
+    color: #bababa;
+    /*font-size:12px;*/
+}
+.shadow-box{
+    position:absolute;
+    top:-5px;
+    left:5px;
+    height: 200px;
+    width:150px;
+    background-color:#f2f2f2;
+    box-shadow: 0px 0px 5px rgba(0,0,0,.3);
+    -webkit-box-shadow:  0px 0px 5px rgba(0,0,0,.3);
+    -ms-box-shadow: 0px 0px 5px rgba(0,0,0,.3);
+    -moz-box-shadow: 0px 0px 5px rgba(0,0,0,.3);
+    z-index:12;
+}
+
+.prev-next-report{
+    position: absolute;
+    font-size:30px;
+    width:20px;
+    height:50px;
+    text-align: center;
+    margin-top:70px;
+    color: #d1d1d1;
+    z-index: 23;
+    line-height:50px;
+    cursor: pointer;
+
+}
+.prev-next-report:hover{
+    color:#f2f2f2;
+    /*transition: 200ms ease-out;*/
+    background-color:rgba(0,0,0,.2);
+
+}
+.prev-report-icon{
+    left:-40px;
+}
+.next-report-icon{
+    right:-40px;
+}
+.next-report-icon-position{
+    background-position:-23px -232px;
+}
+.next-report-icon-position-hover{
+    background-position:-58px -232px;
+}
+.floatLeft{
+    float: left;
+}
+.floatRight{
+    float: right;
+}
+.text-right{
+    text-align: right;
+}
+.deleteMyReport{
+    width:160px;
+    height:215px;
+    position: absolute;
+    left:0px;
+    top:-5px;
+    z-index:24;
+    background: rgba(0,0,0,.5);
+}
+
+.delete-icon, .closeSearchBtn{
+    text-align: center;
+    float: right;
+    cursor: pointer;
+}
+
+.searhinputAndIcon{
+    border:1px solid #e5e5e5;
+}
+.searchBox{
+    position: fixed;
+    top:130px;
+    left:130px;
+    z-index:25;
+    background: #fafafa;
+}
+.closeSearchBtn{
+    background-position:-420px -520px;
+}
+.searchinputBtn{
+    padding:15px 3px;
+    margin:0px 10px;
+}
+.searchinput{
+    border-radius:0px;
+    border:none;
+    height: 30px;
+    width:300px;
+}
+
+.searchBtn{
+    background: #37BFA1;
+    color: #FFFFFF;
+}
+.search-inco, .delete-input-detail, .search-inco-green{
+    width:30px;
+    height:30px;
+    line-height:30px;
+    background-color: #fff;
+
+}
+.search-inco{
+    background-position:-93px -729px;
+}
+.delete-input-detail{
+    background-position:-420px -480px;
+    cursor: pointer;
+}
+.cancel-delete{
+    width:30px;
+    height: 30px;
+    cursor: pointer;
+    float: right;
+    background-position:-32px -679px;
+}
+
+.mask-layout{
+    position: fixed;
+    top:0px;
+    left:0px;
+    background:rgba(0,0,0,.5);
+    width:100%;
+    height:1000px;
+    z-index: 36;
+}
+.report-dialog-ask{
+    position: absolute;
+    width:500px;
+    left:50%;
+    top:20%;
+    margin-left:-250px;
+    background: #F3F3F3;
+}
+.delete-icon{
+    background-position:-420px -445px;
+}
+.close-dialog-icon{
+    background-position:-420px -445px;
+    float: right;
+    margin-right:10px;
+    cursor: pointer;
+}
+.report-dialog-ask-body{
+
+}
+.report-dialog-ask-body-conent{
+    text-align: center;
+    color: #000;
+
+    padding:20px 0px;
+    font-size:14px;
+}
+.report-dialog-ask-body-conent p{
+    margin:15px 0px;
+}
+.error-infr{
+    color: red;
+}
+.report-dialog-ask-footer{
+    width:100%;
+    padding:10px;
+    background: #e2e2e2;
+
+}
+.form-input-name{
+    width:100px;
+    text-align: right;
+    display: inline-block;
+    padding-right:20px;
+    color:#7A7D7F
+}
+.form-input{
+    width:300px;
+    height:30px;
+}
+.red{
+    color: red;
+    padding-right:4px;
+}
+.form p{
+    text-align: left;
+}
+.report-dialog-btn{
+    float: right;
+    margin:10px;
+    background: #37BFA1;
+    padding: 7px 20px;
+    border: none;
+
+    margin: 0px 10px;
+}
+.btn-cancel{
+    background: #FFFFFF;
+    color: #000;
+}
+.btn-save{
+    color: #ffffff;
+    background: #277DEA;
+}
+
+.dialog-body-header{
+    /*margin-top: 10px;*/
+    height: 30px;
+    padding-left: 20px;
+    font-size: 18px;
+    text-align: left;
+    border-bottom:1px solid #E2E2E2;
+}
+/* share dialog */
+.report-dialog-share{
+    position: absolute;
+    width:500px;
+    left:50%;
+    top:50%;
+    margin:-320px 0 0 -250px;
+    background: #F3F3F3;
+}
+.report-dialog-share-heading{
+    border-bottom:1px solid #ddd;
+}
+.report-dialog-share-heading h4{
+    margin:10px;
+    float:left;
+}
+.report-dialog-share-body{
+    height:250px;
+}
+.report-dialog-share-body .share-icon {
+    display: block;
+    width: 110px;
+    height: 94px;
+    margin: 20px auto;
+    background: url("../images/custom/Share.png") 0 0 no-repeat;
+}
+.report-dialog-share-body .share-report-link{
+    margin:10px 100px;
+}
+.report-dialog-share-body .share-report-name{
+    text-align: center;
+}
+/*dataMana Page*/
+#dataMana-body{
+    height:5000px;
+}
+
+/* 预览页面 */
+.preview-page{
+    position:fixed;
+    top:0;
+    left:0;
+    height:100%;
+    width:100%;
+    overflow-y:auto;
+    background-color: rgba(0,0,0,.5);
+    z-index: 1024;
+}
+.preview-close{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    width: 35px;
+    height: 35px;
+    line-height: 28px;
+    text-align: center;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 30px;
+    color: #fff;
+    background: rgba(0,0,0,7);
+}
+.preview-content{
+    position: relative;
+    width: 80%;
+    margin: 50px auto 0 auto;
+    height: 80%;
+    overflow: auto;
+    background-color: #fff;
+}
+.preview-page .chartFile-panel{
+    padding:0;
+    overflow: auto;
+    height: 94%;
+}
+.preview-page .chartPanel{
+    margin:20px;
+}
+.preview-page .chartPanel-heading{
+    background-color: #fff;
+}
+.preview-page .chartPanel,
+.preview-page .chartPanel-container[data-type="grid"],
+.preview-page .chartPanel-container[data-type="grid"] .grid-row,
+.preview-page .chartPanel-container[data-type="grid"] .grid-row .grid-con,
+.preview-page .grid-con .chartPanel{
+    border:0;
+}
+.preview-page .chartPanel-container[data-type="grid"] .grid-con:hover{
+    outline:none;
+}
+.preview-page .chartOper-icon,
+.preview-page .grid-handle{
+    display:none !important;
+}
+
+/* shareReport */
+.shareReport-content{
+    position: absolute;
+    width: 100%;
+    height:100%;
+    overflow: auto;
+}
+.shareReport-content .chartFile{
+    width:80%;
+    margin:0 auto;
+    background: #f7f7f7;
+    box-shadow: 0 1px 10px rgba(0,0,0,.3);
+}
+.shareReport-content .chartFile-panel{
+    padding:0;
+    overflow: auto;
+    height: 94%;
+}
+.shareReport-content .chartPanel{
+    margin:20px;
+}
+.shareReport-content .chartPanel-heading{
+    background-color: transparent;
+}
+.shareReport-content .chartPanel,
+.shareReport-content .chartPanel-container[data-type="grid"],
+.shareReport-content .chartPanel-container[data-type="grid"] .grid-row,
+.shareReport-content .chartPanel-container[data-type="grid"] .grid-row .grid-con,
+.shareReport-content .grid-con .chartPanel{
+    border:0;
+}
+.shareReport-content .chartPanel-container[data-type="grid"] .grid-con:hover{
+    outline:none;
+}
+.shareReport-content .chartOper-icon,
+.shareReport-content .grid-handle{
+    display:none !important;
+}
+
+
+
+.widget-drag-insert {
+    position: absolute;
+    z-index: 10000;
+    background: #289de9
+}
+
+.widget-drag-insert:after,.widget-drag-insert:before {
+    position: absolute;
+    transform: rotate(45deg);
+    content: '';
+    width: 0;
+    height: 0;
+    border: 4px solid transparent;
+    overflow: hidden
+}
+
+.widget-drag-insert.insert-left,.widget-drag-insert.insert-right {
+    width: 4px
+}
+
+.widget-drag-insert.insert-left em,.widget-drag-insert.insert-right em {
+    top: 48%;
+    -webkit-writing-mode: vertical-lr;
+    padding: 5px 1px 5px 0
+}
+
+.widget-drag-insert.insert-left:before,.widget-drag-insert.insert-right:before {
+    top: -8px;
+    border-right-color: #289de9;
+    border-bottom-color: #289de9
+}
+
+.widget-drag-insert.insert-left:after,.widget-drag-insert.insert-right:after {
+    bottom: -8px;
+    border-left-color: #289de9;
+    border-top-color: #289de9
+}
+
+.widget-drag-insert.insert-left em {
+    right: 22px
+}
+
+.widget-drag-insert.insert-left:after,.widget-drag-insert.insert-left:before {
+    left: -2px
+}
+
+.widget-drag-insert.insert-right em {
+    left: 7px
+}
+
+.widget-drag-insert.insert-right:after,.widget-drag-insert.insert-right:before {
+    right: -2px
+}
+
+.widget-drag-insert.insert-bottom,.widget-drag-insert.insert-top {
+    height: 4px
+}
+
+.widget-drag-insert.insert-bottom em,.widget-drag-insert.insert-top em {
+    left: 48%;
+    padding: 2px 5px
+}
+
+.widget-drag-insert.insert-bottom:before,.widget-drag-insert.insert-top:before {
+    left: -8px;
+    border-top-color: #289de9;
+    border-right-color: #289de9
+}
+
+.widget-drag-insert.insert-bottom:after,.widget-drag-insert.insert-top:after {
+    right: -8px;
+    border-bottom-color: #289de9;
+    border-left-color: #289de9
+}
+
+.widget-drag-insert.insert-top em {
+    top: -22px
+}
+
+.widget-drag-insert.insert-top:after,.widget-drag-insert.insert-top:before {
+    top: -2px
+}
+
+.widget-drag-insert.insert-bottom em {
+    top: 5px
+}
+
+.widget-drag-insert.insert-bottom:after,.widget-drag-insert.insert-bottom:before {
+    bottom: -2px
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*media query*/
+@media screen and (min-width:1280px){
+    .myReportContent-main, .myReportWarpBox{
+        width:1035px;
+    }
+    .myReport-own-report, .myReport-share-report{
+        height:245px;
+        margin-top:5px;
+    }
+    .myReport-repsort-header{
+        height:35px;
+        line-height:35px;
+        margin:0px;
+        padding:0px;
+    }
+    .myReport-report-li{
+        height:210px;
+        padding:10px 0px;
+        margin:0px;
+    }
+    .myReport-report-li-box, .shadow-box{
+        height:190px;
+        width:160px;
+        margin-right:56px;
+
+    }
+    .createOwnReportBox{
+        height:190px;
+        width:160px;
+    }
+    .deleteMyReport{
+        height:195px;
+        top:-5px;
+        width:165px;
+    }
+    .report-top-box{
+        padding:5px;
+        height:190px;
+    }
+    .report-img{
+        height:130px;
+    }
+}
+
+@media screen and (max-width:1024px) {
+    .myReportContent-main, .myReportWarpBox{
+        width:810px;
+    }
+    .myReport-own-report, .myReport-share-report{
+        height:240px;
+        margin-top:5px;
+    }
+    .myReport-report-header{
+        height:35px;
+        line-height:35px;
+        margin:0px;
+        padding:0px;
+    }
+    .myReport-report-li{
+        height:205px;
+        padding:10px 0px;
+        margin:0px;
+    }
+    .myReport-report-li-box, .shadow-box{
+        height:185px;
+        width:140px;
+        margin-right:25px;
+    }
+    .createOwnReportBox{
+        height:205px;
+        width:140px;
+    }
+    .deleteMyReport{
+        height:190px;
+        top:-5px;
+        width:145px;
+    }
+    .report-top-box{
+        padding:4px;
+        height:185px;
+    }
+    .report-img{
+        height:100px;
+    }
+}
+
+
+
+
+.my-unit-style{display:block;
+    width:100px;
+    height: 25px;
+    text-align: center;
+    line-height: 25px;
+    border-right: solid 1px #b6b6b6;
+    border-top:solid 1px #b6b6b6;
+    overflow: hidden;
+}
+.my-unit-style2{
+    display:block;
+    width:100px; height: 25px;
+    text-align: center;
+    line-height: 25px;
+    border-bottom: solid 1px #fff;
+    border-right: solid 1px #b6b6b6;
+    overflow: hidden;}
+.my-unit-style3{display:block;
+    width:100px; height: 25px;
+    text-align: center; line-height: 25px;
+    border-right: solid 1px #b6b6b6; overflow: hidden;
+}
+.my-unit-style4{display:block;
+    width:100px;
+    height: 25px; text-align: center;
+    line-height: 25px; border-top: solid 1px #b6b6b6;
+    border-right: solid 1px #b6b6b6; overflow: hidden;}
+.pivotTable{background: #fff; width: auto;
+    border-bottom: solid 1px #b6b6b6;
+    border-left: solid 1px #b6b6b6;
+    border-top: solid 1px #b6b6b6;}
+.pivotTable div{overflow: hidden;}
+.my-unit-border-bottom{border-bottom: solid 1px #b6b6b6;}
+.my-unit-border-right{border-right: solid 1px #b6b6b6;}
+.a_header:hover{background: #dcdcdc !important;}
+.tableHeader{
+    background: #C8C9CA;
+    color: #FFFFFF;
+    border-top:none;
+}
+.btn:hover, .btn:focus, .btn.focus{
+    color:#fff;
+}

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?> 
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lenovo.priestsql.web.dao.mapper.CustomEntryMapper">
+
+    <insert id="saveCustomEntry" parameterType="CustomEntry" useGeneratedKeys="true" keyProperty="id" >
+		insert into priestsql_customEntry(loginName,alias,context,connId) 
+        values(#{loginName},#{alias},#{context},#{connId});
+    </insert>
+    
+    <update id="updateCustomEntry" parameterType="CustomEntry" >
+        update priestsql_customEntry set context=#{context} , alias=#{alias}
+        where id=#{id} and  loginName=#{loginName}
+    </update>
+    
+    <select id="getCustomEntryList" parameterType="Param" resultType="CustomEntry">
+        select id,loginName,alias,context,connId from priestsql_customEntry
+        where loginName=#{loginName} 
+        <if test="paramString != null">
+            and context rlike #{paramString}
+        </if>
+        order by id desc
+        limit ${startIndex},${pageSize} 
+    </select>
+    
+    <select id="getCustomEntryListCount" parameterType="Param" resultType="int">
+        select count(id) from priestsql_customEntry t1
+        where loginName=#{loginName} 
+    </select>
+    
+    
+    <select id="getCustomEntryById" parameterType="Param" resultType="CustomEntry">
+        select id,loginName,alias,context from priestsql_customEntry t1
+        where id=#{id} 
+    </select>
+    
+    <delete id="delCustomEntry" parameterType="Param">
+        delete from priestsql_customEntry where id=#{id} and loginName=#{loginName}
+    </delete>
+    
+    
+    
+</mapper>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="图层_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 400 400" style="enable-background:new 0 0 400 400;" xml:space="preserve" width="200" height="200">
+<style type="text/css">
+	.st0{fill:none;}
+	.st1{fill:#17b0b5;}
+	.st2{fill:url(#XMLID_5_);}
+</style>
+<pattern  width="3" height="3" patternUnits="userSpaceOnUse" id="New_Pattern" viewBox="0 -3 3 3" style="overflow:visible;">
+	<g>
+		<polygon class="st0" points="0,-3 3,-3 3,0 0,0 		"/>
+		<polygon class="st1" points="3,-2 2,-2 2,-3 3,-3 		"/>
+		<polygon class="st1" points="2,-1 1,-1 1,-2 2,-2 		"/>
+		<polygon class="st1" points="1,0 0,0 0,-1 1,-1 		"/>
+	</g>
+</pattern>
+<pattern  id="XMLID_5_" xlink:href="#New_Pattern" patternTransform="matrix(1 0 0 1 0 1)">
+</pattern>
+<path id="XMLID_3_" class="st2" d="M0,0v400h400V0H0z M300,300H100V100h200V300z"/>
+</svg>

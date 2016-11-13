@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	<settings>
+		<setting name="cacheEnabled" value="true" />
+		<setting name="lazyLoadingEnabled" value="true" />
+		<setting name="multipleResultSetsEnabled" value="true" />
+		<setting name="useColumnLabel" value="true" />
+		<setting name="useGeneratedKeys" value="true" />
+		<setting name="defaultExecutorType" value="SIMPLE" />
+	</settings>
+	
+	<typeAliases>
+	    <typeAlias alias="Param" type="com.lenovo.priestsql.web.entity.Param"  /> 
+	    <typeAlias alias="CustomEntry" type="com.lenovo.priestsql.web.entity.CustomEntry"  /> 
+	    <typeAlias alias="DataBase" type="com.lenovo.priestsql.web.entity.DataBase"  /> 
+	    <typeAlias alias="Table" type="com.lenovo.priestsql.web.entity.Table"  /> 
+	    <typeAlias alias="Column" type="com.lenovo.priestsql.web.entity.Column"  /> 
+	    <typeAlias alias="QueryHistory" type="com.lenovo.priestsql.web.entity.QueryHistory"  />
+	    <typeAlias alias="FileHistory" type="com.lenovo.priestsql.web.entity.FileHistory"  />
+	    <typeAlias alias="ClusterUser" type="com.lenovo.priestsql.web.entity.ClusterUser"  />
+	    <typeAlias alias="CustomConnection" type="com.lenovo.priestsql.web.entity.CustomConnection"  />
+	    <typeAlias alias="QueryEntity" type="com.lenovo.priestsql.schedule.entity.QueryEntity"  />
+	    <typeAlias alias="QueryExecutionEntity" type="com.lenovo.priestsql.schedule.entity.QueryExecutionEntity"  />
+	    <typeAlias alias="QueryRelyEntity" type="com.lenovo.priestsql.schedule.entity.QueryRelyEntity"  />
+	</typeAliases>
+</configuration>

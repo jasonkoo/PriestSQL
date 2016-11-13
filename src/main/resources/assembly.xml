@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<assembly
+	xmlns="http://maven.apache.org/plugins/maven-assembly-plugin/assembly/1.1.1"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/plugins/maven-assembly-plugin/assembly/1.1.1 
+	http://maven.apache.org/xsd/assembly-1.1.1.xsd">
+	<formats>
+		<format>tar.gz</format>
+	</formats>
+
+	<dependencySets>
+		<dependencySet>
+			<useProjectArtifact>true</useProjectArtifact>
+			<outputDirectory>lib/</outputDirectory>
+			<excludes>
+				<exclude>junit:junit:jar</exclude>
+			</excludes>
+		</dependencySet>
+	</dependencySets>
+
+	<fileSets>
+		
+		<fileSet>
+			<directory>src/main/resources</directory>
+			<outputDirectory>conf/</outputDirectory>
+			<filtered>false</filtered>
+			<excludes>
+				<exclude>bin/</exclude>
+			</excludes>
+		</fileSet>
+		
+		<fileSet>
+			<directory>src/main/bin</directory>
+			<outputDirectory>bin/</outputDirectory>
+			<filtered>false</filtered>
+			<fileMode>700</fileMode>
+		</fileSet>
+
+		<fileSet>
+			<directory>src/main/webapp/logs</directory>
+			<outputDirectory>logs/</outputDirectory>
+			<filtered>false</filtered>
+			<fileMode>700</fileMode>
+		</fileSet>
+		
+		<fileSet>
+			<directory>src/main/webapp/downloadFiles</directory>
+			<outputDirectory>downloadFiles/</outputDirectory>
+			<filtered>false</filtered>
+			<fileMode>700</fileMode>
+		</fileSet>
+		
+		<fileSet>
+			<directory>src/main/webapp</directory>
+			<outputDirectory>webapp/</outputDirectory>
+			<filtered>false</filtered>
+			<excludes>
+				<exclude>WEB-INF/lib/</exclude>
+				<exclude>gulp/</exclude>
+				<exclude>libs/</exclude>
+				<exclude>downloadFiles</exclude>
+				<exclude>logs</exclude>
+			</excludes>
+		</fileSet>
+	</fileSets>
+</assembly>  

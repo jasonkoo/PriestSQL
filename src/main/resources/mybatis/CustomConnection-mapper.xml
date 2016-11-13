@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?> 
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lenovo.priestsql.web.dao.mapper.CustomConnectionMapper">
+
+
+
+    <insert id="saveConnection" parameterType="CustomConnection"  useGeneratedKeys="true" keyProperty="id">
+	    	insert into priestsql_connection(connectName,connectType,connectUrl,connectDriver,connectUser,connectPwd,connectOwner) 
+	        values(#{connectName},#{connectType},#{connectUrl},#{connectDriver},#{connectUser},#{connectPwd},#{connectOwner});
+    </insert>
+    
+    <update id="updateConnection"  parameterType="CustomConnection" >
+    	update   priestsql_connection set
+				connectName=#{connectName},
+				connectType=#{connectType},
+				connectUrl=#{connectUrl},
+				connectDriver=#{connectDriver},
+				connectUser=#{connectUser},
+				connectPwd=#{connectPwd},
+				connectOwner=#{connectOwner}
+    	where id=${id}
+    </update>
+    
+    
+    <select id="getConnection"  parameterType="int" resultType="CustomConnection" >
+        select id,connectName,connectType,connectUrl,connectDriver,connectUser,connectPwd,connectOwner 
+        from priestsql_connection where id=#{id} and isDelete=0
+    </select>
+    
+    <select id="getConnectionForCleanTask"  parameterType="int" resultType="CustomConnection" >
+        select id,connectName,connectType,connectUrl,connectDriver,connectUser,connectPwd,connectOwner 
+        from priestsql_connection where id=#{id}
+    </select>
+    
+    <select id="getConnections" parameterType="string" resultType="CustomConnection" >
+        select id,connectName,connectType,connectUrl,connectDriver,connectUser,connectPwd,connectOwner 
+        from priestsql_connection where (connectOwner=#{_paramter} or connectOwner='*') and isDelete=0
+        order by id asc
+    </select>
+    
+    <select id="delConnection" parameterType="int">
+        update priestsql_connection set isDelete=1 where id=#{id}
+    </select>
+    
+</mapper>

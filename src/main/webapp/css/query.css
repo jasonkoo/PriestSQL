@@ -1,0 +1,745 @@
+/* query page*/
+
+.dotted-hr-noMargin {
+    margin-top: 0px !important;
+    margin-bottom: 0px !important;
+
+}
+
+.dataSourcesOrSetTab {
+    float:left;
+    width:300px;
+    background: #fff;
+    /*min-height:900px;*/
+    /*overflow-y: scroll;*/
+    border-right: 1px solid #e5e5e5;
+
+}
+label.error{
+    display: block;
+    text-align: left;
+    margin-left:175px;
+    color:red;
+    font-weight:400;
+    font-size:12px;
+}
+.redColorFont{
+    color:red;
+}
+.addDataTable {
+    font-size: 11px;
+    margin-right: 5px;
+}
+
+.addDataTableAdd {
+    color: #0876BC;
+}
+
+.dataSource-search-input-box {
+    border: 1px solid #E5E5E5;
+    height: 32px;
+
+}
+
+.dataSource-search-input {
+    width: 87%;
+    margin: 10px auto;
+}
+
+.connect-icon {
+    background: url("../images/a2_icon_4.PNG") no-repeat;
+    display: inline-block;
+    height: 17px;
+    width: 17px;
+    margin-top: 13px !important;
+    margin-right: 8px !important;
+}
+
+.dataSearchInput {
+    width: 88%;
+    background: transparent;
+    outline: none;
+    padding: 0px 4px;
+}
+
+.dataSearchInput::-moz-placeholder {
+    color: #8E8E8E;
+}
+
+.dataSearchInput::-webkit-input-placeholder {
+    color: #8E8E8E;
+}
+
+.dataSearchInput:-ms-input-placeholder {
+    color: #8E8E8E;
+}
+
+.dataSourceSearch-icon {
+    background-color: transparent;
+}
+
+.dotted-hr {
+    height: 1px;
+    width:85%;
+    margin: 0px auto;
+    background: url("../images/a3_hr.PNG") no-repeat;;
+}
+
+.addSource-icon {
+    background: url("../images/add.PNG") no-repeat;;
+    height: 12px;
+    display: inline-block;
+    width: 12px;
+    margin-right: 5px;
+}
+.ulHide{
+    display: none;
+}
+
+.dataUl {
+    margin: 0px;
+    padding: 0px;
+}
+
+.data-dataSource-li {
+    color: #000;
+}
+.data-dataSource-li:hover, .data-dataBase-li:hover{
+    background:#f3f3f3;
+}
+.data-dataBase-li, .data-dataTable-li {
+    color: #898E92;
+}
+.data-dataSource-li{
+    padding: 0px 20px;
+    height: 36px;
+    line-height: 36px;
+    cursor: pointer;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+ .data-dataTable-li, .data-dataBase-li {
+    padding: 0px 18px;
+    height: 36px;
+    line-height: 36px;
+    cursor: pointer;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+ .connect-name{
+     white-space: nowrap;
+     text-overflow: ellipsis;
+     overflow: hidden;
+ }
+.data-dataBase-li{
+    /*padding-right:20px;*/
+}
+.data-dataTable-li {
+    position: relative;
+    padding-left: 42px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    padding-right:40px;
+    overflow: hidden;
+}
+.logoOut{
+    right: 0px;
+    padding:0px;
+    min-width:60px;
+    width:60px;
+}
+.logoOut > li > a{
+    padding:3px 15px;
+    /*width:60px;*/
+}
+.splitLine{
+    background:url('../images/SplitLine.png') no-repeat;
+    height:7px;
+    width:19px;
+    margin-left:50%;
+   margin-top:-4px;
+    cursor:s-resize;
+}
+.data-dataBase-li {
+    /*padding-left: 43px;*/
+}
+
+.data-active {
+    background: #3EA5E7;
+    color: #FFFFFF;
+}
+
+.server-icon, .toggle-icon {
+    height: 22px;
+}
+
+.server-icon {
+    background-position: -140px -40px;
+}
+
+.toggle-icon {
+    float: right;
+}
+
+.toggle-show-icon {
+    background: red;
+}
+
+.toggle-hide-icon {
+    background: blue;
+}
+
+.addDataSource {
+    color: #3EA5E7;
+    height: 45px;
+    border-top: 1px solid #E5E5E5;
+    border-right: 1px solid #E5E5E5;
+    line-height: 45px;
+    text-align: center;
+    position: absolute;
+    /*position: fixed;*/
+    bottom:0px;
+    width: 300px;
+    background: #FAFAFA;
+    cursor: pointer;
+    font-weight: bold;
+}
+.radio_style{
+    margin:0px 10px!important;
+}
+.queryList {
+    padding: 0 20px;
+    margin: 0 auto;
+    height: 40px;
+    line-height: 40px;
+    cursor: pointer;
+}
+.queryList:hover{
+    background:#f3f3f3;
+}
+
+.historyQuery-icon {
+    background: url("../images/a2_icon_1.PNG") no-repeat;;
+    height: 12px;
+    width: 16px;
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.savedQuery-icon {
+    background: url("../images/a2_icon_2.PNG") no-repeat;;
+    height: 12px;
+    width: 16px;
+    display: inline-block;
+    margin-right: 5px;
+}
+.createDataSourceModel label{
+    font-weight: normal;
+}
+.confirmHeader {
+    font-size: 16px;
+}
+
+.disable-addDataSource {
+    color: #A8ABB1;
+    cursor: auto;
+}
+
+.sourcesName {
+    font-size: 14px;
+}
+
+.tableName {
+    font-size: 13px;
+}
+#backConnect{
+    background-image:url('../images/_back.png');
+    width:22px;
+    height:22px;
+    display: inline-block;
+    vertical-align: bottom;
+    margin:0px 4px 0px 0px;
+    cursor: pointer;
+}
+.connect-name{
+    /*padding:15px 20px;*/
+    padding:15px 20px 10px 20px;
+}
+
+.sourcesName{
+   max-width: 160px;
+    display: inline-block;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    float: left;
+}
+.checkConnectionInf{
+    text-align: left;
+    margin-left:130px;
+}
+.successInfo{
+    color:green;
+}
+.errorInfo{
+    color:red;
+}
+.flex-icon-close {
+    width: 0px;
+    height: 0px;
+    content: "";
+    margin-top:30px;
+    border: 4px solid transparent;
+    border-left-color: #000;
+    margin-left: -1px;
+}
+
+.dataIcons {
+    margin-top: 6px;
+    height: 22px;
+}
+
+.table-icon {
+    background-position: -26px -484px;
+}
+
+.table-active-icon {
+    background-position: -62px -484px
+}
+
+.disable-table-icon {
+    background-position: -98px -484px;
+}
+
+.toggle-icon-open {
+    background-position: -130px -10px;
+}
+
+.toggle-icon-close {
+    background-position: -167px -10px;
+}
+
+
+.data-delete-icon {
+    background-position: -26px -630px;
+}
+
+.activeSource {
+    color: #0876BC;
+}
+.data-dataTable-li:hover{
+    background:#F3F3F3;
+}
+.activeTable {
+    background: #3BB064!important;
+    color: #fff;
+}
+
+.search-icon-blue {
+    background: url("../images/a2_icon_3_2.PNG") no-repeat;
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    margin: 8px 4px;
+}
+
+.search-inco {
+    background: url("../images/a2_icon_3_1.PNG") no-repeat;
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    margin: 8px 4px;
+}
+.notHaveDataSource{
+    display: none;
+}
+.createDataSource {
+    text-align: center;
+    height: 50px;
+    line-height: 50px;
+    text-decoration: underline;
+    color: #3EA5E7;
+    cursor: pointer;
+}
+
+.tableList-max-height {
+    max-height:250px;
+    overflow: hidden;
+    position: relative;
+}
+.paddingBot10{
+    padding-bottom:30px;
+}
+.gray{
+    color:#B6B9BB;
+}
+.tablesListInner {
+    max-height:220px;
+    /*overflow-y: scroll;*/
+}
+.connectionsDom{
+    margin-bottom:45px;
+}
+.moreList{
+    /*padding-bottom: 30px;*/
+    overflow-y: scroll;
+}
+.searchMore{
+    overflow-y: scroll;
+
+}
+
+.tableList-more {
+    text-align: center;
+    height:30px;
+    line-height:30px;
+    /*position: absolute;*/
+    /*top: 190px;*/
+    z-index:20;
+    width: 100%;
+    cursor: pointer;
+    background: #FAFAFA
+}
+
+.icon-more {
+    height: 7px;
+    width: 7px;
+    display: inline-block;
+    background-image: url("../images/more.png");
+    background-repeat:  no-repeat;
+}
+
+/* 设置滚动条的样式 */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+/* 滚动槽 */
+::-webkit-scrollbar-track {
+    border:none;
+    background:#fff;
+}
+
+/* 滚动条滑块 */
+::-webkit-scrollbar{
+    width:8px;
+    height:10px
+}
+::-webkit-scrollbar-thumb{
+    border-radius:5px;
+    background:#DDDEE0;
+    -webkit-box-shadow:inset 0 0 10px rgba(0,0,0,0.1)
+}
+::-webkit-scrollbar-track{
+    background:#fff;
+}
+
+/* query page*/
+.btn-sfj{
+    width: 110px;
+    margin: 0 5px 0 5px;
+    background: #EFF2ED;
+    border: 1px solid #cdd0cb;
+}
+.btn-query{
+
+}
+#connectType{
+    line-height: 33px;
+}
+/* li start*/
+.query-content{
+    margin: 0 20px 20px 20px;
+}
+.query-content-btn{
+    margin: 20px 0 20px 0;
+}
+.query-content-tab{
+    width: 100%;
+    border: 1px solid #dcdcdc;
+    border-left:none;
+    height: 30px;
+    background: #f4f4f4;
+
+}
+.addDataSourcesBtn:hover{
+    background:#e9ebec;
+}
+.query-content-li{
+    float: left;
+    min-width: 130px;
+    height: 29px;
+    padding:0 5px;
+    border-left: 1px solid #dcdcdc;
+    line-height: 29px;
+    text-align: center;
+    cursor: pointer;
+}
+.query-titleand-tab{
+    margin: 20px 20px 0 20px;
+}
+.query-content-title{
+    font-weight: 500;
+    font-size: 16px;
+}
+.query-content-sql{
+    border-left: 1px solid #dcdcdc;
+    border-right: 1px solid #dcdcdc;
+    border-bottom: 1px solid #dcdcdc;
+}
+.tab-add{
+    border-right: 1px solid #dcdcdc;
+    border-left: 1px solid #dcdcdc;
+    width: 32px;
+    height: 28px;
+    float: left;
+    line-height: 28px;
+    text-align: center;
+    cursor: pointer;
+}
+.run-state-icon{
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin-left: 5px;
+    margin-right: 8px;
+}
+.red{
+    background: rgb(217, 83, 79);
+}
+.activeDataBase{
+
+}
+/*成功*/
+.sta-green{
+    background: #00c100;
+}
+/*未执行*/
+.sta-not-run{
+    background : #ffffff;
+    border: 1px solid #ccc;
+}
+/*执行中*/
+.sta-loading{
+    width: 14px;
+    height: 17px;
+    margin-left: 2px;
+    margin-right: 7px;
+    background:url("../images/loading_GIF.gif") -1px 2px no-repeat;
+}
+/*取消*/
+.sta-cancel{
+    background: #B6B9BB;
+}
+/*失败*/
+.sta-fail{
+    background: #d54836;
+}
+.query-tab-active{
+    background: #ffffff;
+}
+.query-btn-run-color{
+    background: #d54836;
+}
+.run-close-icon{
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    background: url("../images/a2_icon_9_1.PNG") 0px 1px no-repeat;
+    margin-left: 11px;
+    cursor: pointer;
+}
+.run-close-icon:hover{
+    background: url("../images/a2_icon_9_2_hover.PNG") no-repeat;
+}
+.line-separ{
+    height: 0;
+    border-top: 1px solid #dcdcdc;
+}
+.btn-sfj{
+    width: 110px;
+    margin: 0 10px 0 10px;
+    background: #f4f4f4;
+    border: 1px solid #dcdcdc;
+    font-weight: bold;
+}
+.btn-query{
+    width: 110px;
+}
+.result-content{
+    margin-top: 30px;
+}
+.result-title{
+    height: 30px;
+}
+.float-left{
+    float: left;
+}
+.float-right{
+    float: right;
+}
+.result-title-name{
+    font-size: 30px;
+    margin-top: -17px;
+}
+.result-load-icon{
+    width: 16px;
+    height: 16px;
+    margin-left: 10px;
+    margin-top: 3px;
+}
+.result-load-time{
+    color: #dcdcdc;
+    margin-left: 10px;
+}
+
+.result-load-icon-loading{
+    background: url("../images/loading_GIF.gif") no-repeat;
+}
+.result-load-icon-ok{
+    background: url("../images/a2_icon_10_1.PNG") no-repeat;
+}
+.result-load-icon-fail{
+    background: url("../images/a2_icon_10_2.PNG") no-repeat;
+}
+.result-load-icon-cancel{
+    background: url("../images/mask/icon_cancel.png") no-repeat;
+}
+
+
+.result-load-fail-text{
+    color: #ff0000;
+    font-size: 14px;
+    font-weight: 600;
+    display: none;
+}
+.log-container{
+    cursor: pointer;
+}
+.to-log{
+    background: url("../images/a2_icon_11(Log).PNG") no-repeat;
+}
+.to-log-text{
+    color: #0088ff;
+}
+.log-substance-container{
+    margin-top: 20px;
+}
+.activeConnectIcon{
+    background: url("../images/a2_icon_4.PNG") no-repeat 3px 10px;
+    display: inline-block;
+    margin:0px 6px;
+    height:22px;
+    width:17px;
+}
+.log-substance{
+    min-height: 150px;
+    max-height: 300px;
+    background: rgb(245, 245, 245);
+    border: 1px solid rgb(204, 204, 204);
+    border-radius:0px;
+}
+.show{
+    display: block;
+}
+.hidden{
+    display: none;
+}
+/*li end*/
+
+/*page*/
+.table{
+    margin-bottom: 0;
+}
+.table thead{
+    background: #EFEFEF;
+}
+.table> thead > tr > th,
+.table> tbody > tr > td{
+    vertical-align: middle;
+    border-bottom-width: 1px;
+    white-space: nowrap;
+}
+.table> tbody > tr > td{
+    color: #898E92;
+}
+.table thead{
+    background: #EFEFEF;
+}
+.logCon .table> thead > tr > th,
+.logCon .table> tbody > tr > td{
+    padding:5px 30px;
+}
+
+.logCon .table> thead > tr > th:not(:last-child),
+.logCon .table> tbody > tr > td:not(:last-child){
+    width:20%;
+}
+.inner{
+    text-align: center;
+    margin-top: 20px;
+}
+.inner a,.inner span{
+    color: #666;
+    margin: 5px;
+}
+.inner a{
+    text-decoration: none;
+}
+.inner a:hover{
+    border-bottom: 1px solid red;
+    color:red;
+    text-decoration: none;
+}
+.inner span{
+    color:#333;
+    font-weight: 600;
+}
+.logCon .resultTable {
+    max-height: 340px;
+    overflow:auto;
+    width:100%;
+    margin-top:10px;
+}
+.logCon .table-responsive {
+    min-height: .01%;
+}
+.logCon .tableSchema-title-name{
+    font-weight: 600;
+    margin-bottom: 30px;
+
+}
+.tableSchema-title-name{
+    float: left;
+}
+
+.logCon #ResultListHeader th{
+    height:36px;
+    text-align: center;
+}
+.logCon #ResultListHeader{
+    /*position: absolute;*/
+}
+.logCon #ResultList td{
+    text-align: left;
+    height:36px;
+    /*max-width: 400px;*/
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+#ResultList .label{
+    display: inline-block;
+    margin: 10px;
+    padding: 10px;
+}
+/*省略处理*/
+.ellipsis{
+    display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width:500px;
+}
+/*page end*/

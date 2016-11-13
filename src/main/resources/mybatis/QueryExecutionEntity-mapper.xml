@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8" ?> 
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lenovo.priestsql.schedule.dao.ScheduleDao">
+
+    <resultMap id="resultMapQueryJobExecution" type="QueryExecutionEntity">
+        <result property="id" column="id"/>
+        <result property="queryId" column="queryId"/>
+        <result property="name" column="name"/>
+        <result property="aliasName" column="aliasName"/>
+        <result property="owner" column="owner"/>
+        <result property="executeState" column="executeState"/>
+        <result property="startDate" column="startDate"/>
+        <result property="endDate" column="endDate"/>
+        <result property="duration" column="duration"/>
+        <result property="log" column="log"/>
+        <association property="queryEntity" column="queryId" javaType="QueryEntity" select="getQueryEntity"/>
+    </resultMap>
+
+    <sql id="queryJobExecutionColumns">
+        <![CDATA[
+		id,queryId,name,aliasName,owner,executeState,startDate,endDate,duration,log
+	    ]]>
+    </sql>
+
+    <sql id="queryJobExecutionWhere">
+        <where>
+            <if test="@Ognl@isNotEmpty(id)">
+                AND id = #{id}
+            </if>
+            <if test="@Ognl@isNotEmpty(queryId)">
+                AND queryId = #{queryId}
+            </if>
+            <if test="@Ognl@isNotEmpty(name)">
+                AND name = #{name}
+            </if>
+            <if test="@Ognl@isNotEmpty(aliasName)">
+                AND aliasName = #{aliasName}
+            </if>
+            <if test="@Ognl@isNotEmpty(owner)">
+                AND owner = #{owner}
+            </if>
+            <if test="@Ognl@isNotEmpty(executeState)">
+                AND executeState = #{executeState}
+            </if>
+            <if test="@Ognl@isNotEmpty(startDateBegin)">
+                AND startDate >= #{startDateBegin}
+            </if>
+            <if test="@Ognl@isNotEmpty(startDateEnd)">
+                AND startDate &lt;= #{startDateEnd}
+            </if>
+            <if test="@Ognl@isNotEmpty(endDateBegin)">
+                AND endDate >= #{endDateBegin}
+            </if>
+            <if test="@Ognl@isNotEmpty(endDateEnd)">
+                AND endDate &lt;= #{endDateEnd}
+            </if>
+            <if test="@Ognl@isNotEmpty(startDate)">
+                AND startDate &gt;= '${startDate} 00:00:00'
+            </if>
+            <if test="@Ognl@isNotEmpty(endDate)">
+                AND endDate &lt;= '${endDate} 23:59:59'
+            </if>
+            <if test="@Ognl@isNotEmpty(duration)">
+                AND duration = #{duration}
+            </if>
+            <if test="@Ognl@isNotEmpty(log)">
+                AND log = #{log}
+            </if>
+            <if test="@Ognl@isNotEmpty(searchKey)">
+                AND name like concat('%', #{searchKey}, '%')
+            </if>
+        </where>
+    </sql>
+
+    <insert id="addQueryExecutionRecord" useGeneratedKeys="true" keyProperty="id">
+        <![CDATA[
+        INSERT INTO priestsql_executed_job (
+        	id ,
+        	queryId ,
+        	name ,
+        	aliasName ,
+        	owner ,
+        	executeState ,
+        	startDate ,
+        	endDate ,
+        	duration ,
+        	log
+        ) VALUES (
+        	#{id} ,
+        	#{queryId} ,
+        	#{name} ,
+        	#{aliasName} ,
+        	#{owner} ,
+        	#{executeState} ,
+        	#{startDate} ,
+        	#{endDate} ,
+        	#{duration} ,
+        	#{log}
+        )
+    ]]>
+    </insert>
+
+    <update id="updateQueryExecutionRecord" >
+        <![CDATA[
+        UPDATE priestsql_executed_job SET
+	        queryId = #{queryId} ,
+	        `name` = #{name} ,
+	        aliasName = #{aliasName} ,
+	        owner = #{owner} ,
+	        executeState = #{executeState} ,
+	        startDate = #{startDate} ,
+	        endDate = #{endDate} ,
+	        duration = #{duration} ,
+	        log = #{log}
+        WHERE
+	        id = #{id}
+    ]]>
+    </update>
+
+    <delete id="deleteQueryExecutionRecord">
+        <![CDATA[
+        DELETE FROM priestsql_executed_job WHERE
+        queryId = #{jobId}
+    ]]>
+    </delete>
+
+    <select id="getQueryExecutionRecord" resultMap="resultMapQueryJobExecution" >
+        SELECT <include refid="queryJobExecutionColumns" />
+        <![CDATA[
+		    FROM priestsql_executed_job
+	        WHERE
+		        id = #{id}
+	    ]]>
+    </select>
+
+    <select id="countQueryExecutionRecord" resultType="int">
+        SELECT count(*) FROM priestsql_executed_job
+        <include refid="queryJobExecutionWhere"/>
+    </select>
+
+    <select id="findQueryJobExecutionList" resultMap="resultMapQueryJobExecution">
+        SELECT <include refid="queryJobExecutionColumns" />
+        FROM priestsql_executed_job
+        <include refid="queryJobExecutionWhere"/>
+
+        <if test="@Ognl@isNotEmpty(sortColumns)">
+            ORDER BY ${sortColumns}
+        </if>
+        limit ${startIndex}, ${pageSize}
+    </select>
+</mapper>

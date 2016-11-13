@@ -1,0 +1,267 @@
+/* main-body */
+.main-body{
+    position: absolute;
+    top:62px;
+    right:0;
+    bottom:0;
+    left:0;
+    min-width: 1270px;
+}
+/* leftBar */
+.main-body .leftBar{
+    float:left;
+    width:300px;
+    margin: 0;
+    border-right:1px solid #e5e5e5;
+}
+.leftBar li a{
+    display: inline-block;
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 40px;
+    text-decoration: none;
+    color: #000;
+}
+.leftBar li.active a{
+    background: #3BB064;
+    color:#fff;
+}
+.icon_job{
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin: 0 10px;
+    vertical-align: sub;
+    cursor: pointer;
+}
+.leftBar li .icon_task{
+    background: url('../images/job/icon_task.png') 0 0 no-repeat;
+}
+.leftBar li.active .icon_task{
+    background: url('../images/job/icon_task_hover.png') 0 0 no-repeat;
+}
+.leftBar li .icon_history{
+    background: url('../images/job/icon_history.png') 0 0 no-repeat;
+}
+.leftBar li.active .icon_history{
+    background: url('../images/job/icon_history_hover.png') 0 0 no-repeat;
+}
+
+/* content */
+.main-body .content .page-head{
+    padding: 10px 20px;
+    border-bottom: 1px solid #e5e5e5;
+}
+.main-body .content .page-content{
+    background: #EDF1F2;
+    overflow:auto;
+}
+.cont-area{
+    background: #fff;
+    margin:20px;
+    padding: 15px;
+    min-height: 400px;
+}
+.cont-area .toolbar{
+    margin-bottom: 10px;
+}
+.cont-area .toolbar .btn{
+    padding: 5px 30px;
+}
+.cont-area .page-header{
+    margin-top: 0;
+}
+.form-horizontal .form-control{
+    display:inline-block;
+    width: 50%;
+    margin: 0 10px;
+}
+.day-lst{
+    padding:8px 10px;
+}
+.day-lst label{
+    width:60px;
+}
+.form-tool .btn{
+    margin: 20px 20px 20px 10px;
+    padding: 5px 30px
+}
+.cont-area #table-lst{
+    min-height: 400px;
+    position: relative;
+}
+.cont-area #table-nodata{
+    position: absolute;
+    top:32px;
+    left:0;
+    right:0;
+    bottom:0;
+    display: none;
+}
+/* sql */
+.edit .CodeMirror{
+    margin-left: 10px;
+    border: 1px solid #ddd;
+    display: inline-block;
+    vertical-align: middle;
+    border-radius:2px;
+}
+/* search */
+.btn-search{
+    cursor: pointer;
+}
+.date2 .btn-r1{
+    height: 34px;
+    background: #efefef;
+    border: 1px solid #ccc;
+    outline: none;
+    padding: 0 10px;
+}
+/* datepicker */
+.cycle-datepicker{
+    position: absolute;
+    left: 10px;
+    display: none;
+    width: 250px;
+    padding: 10px;
+    border: 1px solid #eee;
+    background: #f3f3f3;
+    z-index: 99;
+    box-shadow: 0px 5px 5px rgba(0,0,0,.3);
+}
+.cycle-datepicker .date-lst ul{
+    display: inline-block;
+    height: 120px;
+    width: 109px;
+    margin: 0 10px 5px 0;
+    overflow: auto;
+    background: #fff;
+    vertical-align: top;
+}
+.cycle-datepicker .date-lst ul li{
+    padding: 5px 10px;
+    cursor: pointer;
+}
+.cycle-datepicker .date-lst ul li.active{
+    color:#fff;
+    background: #64A3F3;
+}
+.cycle-datepicker .date-lst ul:last-child{
+    margin-right: 0;
+}
+.custom input{
+    width:65px;
+}
+.footer{
+    text-align: right;
+    margin-top: 5px;
+}
+.footer .btn-sure{
+    padding: 4px 12px;
+    color:#fff;
+    background: #64A3F3;
+}
+/* table */
+.table> thead > tr > th,
+.table> tbody > tr > td{
+    text-align: center;
+}
+.icon_job.icon_execute{
+    background: url('../images/job/icon_execute.png') 0 0 no-repeat;
+}
+.icon_job.icon_stop{
+    background: url('../images/job/icon_stop.png') 0 0 no-repeat;
+}
+.icon_job.icon_start{
+    background: url('../images/job/icon_strat.png') 0 0 no-repeat;
+}
+.icon_job.icon_edit{
+    background: url('../images/job/icon_edit.png') 0 0 no-repeat;
+}
+.icon_job.icon_delete{
+    background: url('../images/job/icon_delete.png') 0 0 no-repeat;
+}
+.icon_job.icon_history{
+    background: url('../images/job/icon_history.png') 0 0 no-repeat;
+}
+.icon_job.icon_restart{
+    background: url('../images/job/icon_restart.png') 0 0 no-repeat;
+}
+.icon_edit_gray{
+    cursor: default;
+    background: url('../images/job/icon_edit_gray.png') 0 0 no-repeat;
+}
+.icon_history_gray{
+    cursor: default;
+    background: url('../images/job/icon_history_gray.png') 0 0 no-repeat;
+}
+.icon_restart_gray{
+    cursor: default;
+    background: url('../images/job/icon_restart_gray.png') 0 0 no-repeat;
+}
+.triTop{
+    display:inline-block;
+    border-left:4px solid  transparent;
+    border-right:4px solid  transparent;
+    border-top:6px solid #333;
+    width:0;
+    height:0;
+    margin-left:3px;
+    vertical-align: middle;
+    margin-left: 3px;
+    cursor: pointer;
+}
+.triDown{
+    display:inline-block;
+    border-left:4px solid  transparent;
+    border-right:4px solid  transparent;
+    border-bottom:6px solid #333;
+    width:0;
+    height:0;
+    margin-left:3px;
+    vertical-align: middle;
+    margin-left: 3px;
+    cursor: pointer;
+}
+.cont-area  .table th{
+    cursor: pointer;
+}
+.cont-area  .table .triTop,
+.cont-area  .table .triDown{
+    display: none;
+}
+.operation{
+    position: relative;
+}
+.popwin{
+    background: #fff;
+    border: 1px solid #e7e7e7;
+    border-radius: 5px;
+    position: absolute;
+    right: 0px;
+    top: 30px;
+    display: none;
+    z-index: 2;
+}
+.grayRow{
+    width: 100%;
+    height: 35px;
+    background: #f4f4f4;
+    margin:0;
+    padding: 4px 10px 0 0;
+}
+.bot{
+    border-radius: 0 0 5px 5px;
+}
+.popwin .con {
+    word-wrap: break-word;
+    white-space:pre;
+    overflow-y:scroll;
+    width: 100%;
+    height:200px;
+    padding: 35px 12px 0 12px;
+    line-height: 22px;
+    text-align: left;
+    margin:0;
+}

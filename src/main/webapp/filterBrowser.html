@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Priest SQl</title>
+    <link href="css/main.css" rel="stylesheet"/>
+    <link href="js/CodeMirror-master/addon/hint/show-hint.css" rel="stylesheet"/>
+    <link href="js/CodeMirror-master/lib/codemirror.css" rel="stylesheet"/>
+    <script type="text/javascript" src="js/jquery-1.12.0.min.js"></script>
+    <script type="text/javascript" src="js/queryBrowser.js"></script>
+</head>
+<body>
+<header id="public-header" class="container-full" style="z-index: 3;position: relative">
+    <div class="header-row-wrap" style="margin-left: auto;margin-right:auto;">
+        <div class="row">
+            <div class="col-sm-3 col-md-3 col-lg-3 header-left" style="background-color: #0876BC;height: 70px;">
+                <div class="logo-img">
+                </div>
+            </div>
+            <div class="col-sm-9 col-md-9 col-lg-9 header-right" style="height: 70px;">
+                <div class="header-right-content">
+                    <div class="header-right-menu header-right-menu-home"><a href="#" class="menu-item" style="float:right;width:85px;height: 70px; border-left: 1px solid #6CBAF7;text-align: center;line-height: 70px;"><i class="info-icon"></i></a></div>
+                    <div class="header-right-menu header-right-menu-info"><a href="#" class="menu-item" style="float:right;width:85px;height: 70px; border-left: 1px solid #6CBAF7;text-align: center;line-height: 70px;"><i class="home-icon"></i></a></div>
+                    <div class="header-right-menu header-right-menu-file"><a href="jobBrowser.html" class="menu-item" style="float:right;width:125px;height: 70px;text-align: center;line-height: 70px;font-size: 17px;">Job</a></div>
+                    <div class="header-right-menu header-right-menu-file"><a href="fileBrowser.html" class="menu-item" style="float:right;width:125px;height: 70px;text-align: center;line-height: 70px;font-size: 17px;">File</a></div>
+                    <div class="header-right-menu header-right-menu-file"><a href="filterBrowser.html" class="menu-item menu-item-active" style="float:right;width:125px;height: 70px;text-align: center;line-height: 70px;font-size: 17px;">Query</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<main id="dataMan-body">
+    <div class="container-full clearFloat" style=" position: relative;overflow: hidden;">
+        <div class="col-lg-3 col-md-3 col-sm-3 dataSourcesOrSetTab">
+            <div class="" style="height:10px;">
+            </div>
+            <div class="queryList historyQuery">
+                <i class="historyQuery-icon"></i>
+                    <span>
+                       查询历史
+                    </span>
+            </div>
+            <div class="queryList savedQuery">
+                <i class="savedQuery-icon"></i>
+                查询文件
+            </div>
+            <div class="dotted-hr clearFloat"></div>
+            <div class="dataSource-search-input">
+                <div class="dataSource-search-input-box">
+                    <input type="text"  class="querySearchInput searchinput dataSearchInput floatLeft" placeholder="搜索">
+                    <div class="icon floatLeft dataSourceSearch-icon search-inco"></div>
+                </div>
+            </div>
+            <div class="dotted-hr clearFloat"></div>
+            <div class="notHaveDataSource">
+                <p class="createDataSource addDataSourcesBtn">
+                    创建数据源
+                </p>
+            </div>
+            <ul class="dataUl dataSource-li">
+                <li class="data-dataSource-li dataConnectName">
+                    <i class="connect-icon dataIcons floatLeft"></i>
+                    <span class="data-name sourcesName">connect1</span>
+                </li>
+                <ul class="dataUl dataTable-li ulHide">
+                    <li class="data-dataBase-li">
+                        <i class="icon2 server-icon dataIcons floatLeft"></i>
+                        <span class="data-name sourcesName">Lenovo-kp1</span>
+                        <i class="icon2 toggle-icon dataIcons floatRight toggle-icon-open"></i>
+                    </li>
+                    <ul class="dataUl dataTable-li tableList-max-height ulHide">
+                        <div class="tableList-more gray" >
+                            更多 <i class="icon-more"></i>
+                        </div>
+                        <div class="tablesListInner">
+                            <li class="data-dataTable-li">
+                                <i class="icon2 tableIcon disable-table-icon dataIcons floatLeft"></i>
+                                <span class="data-name tableName">table1</span>
+                            </li>
+                            <li class="data-dataTable-li">
+                                <i class="icon2  tableIcon disable-table-icon dataIcons floatLeft"></i>
+                                <span class="data-name tableName">table2</span>
+                            </li>
+                            <li class="data-dataTable-li">
+                                <i class="icon2 tableIcon disable-table-icon dataIcons floatLeft"></i>
+                                <span class="data-name tableName">table3</span>
+                            </li>
+                            <li class="data-dataTable-li">
+                                <i class="icon2 tableIcon disable-table-icon dataIcons floatLeft"></i>
+                                <span class="data-name tableName">table1</span>
+                            </li>
+                            <li class="data-dataTable-li">
+                                <i class="icon2  tableIcon disable-table-icon dataIcons floatLeft"></i>
+                                <span class="data-name tableName">table2</span>
+                            </li>
+                            <li class="data-dataTable-li">
+                                <i class="icon2 tableIcon disable-table-icon dataIcons floatLeft"></i>
+                                <span class="data-name tableName">table3</span>
+                            </li>
+                            <li class="data-dataTable-li">
+                                <i class="icon2 tableIcon disable-table-icon dataIcons floatLeft"></i>
+                                <span class="data-name tableName">table1</span>
+                            </li>
+                            <li class="data-dataTable-li">
+                                <i class="icon2  tableIcon disable-table-icon dataIcons floatLeft"></i>
+                                <span class="data-name tableName">table2</span>
+                            </li>
+                            <li class="data-dataTable-li">
+                                <i class="icon2 tableIcon disable-table-icon dataIcons floatLeft"></i>
+                                <span class="data-name tableName">table3</span>
+                            </li>
+                        </div>
+                    </ul>
+
+
+                </ul>
+                <div class="dotted-hr-noMargin dotted-hr clearFloat"></div>
+            </ul>
+            <ul class="dataUl dataSource-li">
+                <li class="data-dataSource-li  dataConnectName">
+                    <i class="connect-icon dataIcons floatLeft"></i>
+                    <span class="data-name sourcesName">connect1</span>
+                </li>
+                <ul class="dataUl dataTable-li ulHide">
+                    <li class="data-dataBase-li">
+                        <i class="icon2 server-icon dataIcons floatLeft"></i>
+                        <span class="data-name sourcesName">Lenovo-kp1</span>
+                        <i class="icon2 toggle-icon dataIcons floatRight toggle-icon-open"></i>
+                    </li>
+                    <ul class="dataUl dataTable-li tableList-max-height ulHide">
+                        <div class="tableList-more gray" >
+                            更多 <i class="icon-more"></i>
+                        </div>
+                        <div class="tablesListInner">
+                            <li class="data-dataTable-li">
+                                <i class="icon2 tableIcon disable-table-icon dataIcons floatLeft"></i>
+                                <span class="data-name tableName">table1</span>
+                            </li>
+                            <li class="data-dataTable-li">
+                                <i class="icon2  tableIcon disable-table-icon dataIcons floatLeft"></i>
+                                <span class="data-name tableName">table2</span>
+                            </li>
+                            <li class="data-dataTable-li">
+                                <i class="icon2 tableIcon disable-table-icon dataIcons floatLeft"></i>
+                                <span class="data-name tableName">table3</span>
+                            </li>
+                        </div>
+                    </ul>
+                </ul>
+                <ul class="dataUl dataTable-li ulHide">
+                    <li class="data-dataBase-li">
+                        <i class="icon2 server-icon dataIcons floatLeft"></i>
+                        <span class="data-name sourcesName">Lenovo-kp1</span>
+                        <i class="icon2 toggle-icon dataIcons floatRight toggle-icon-open"></i>
+                    </li>
+                    <ul class="dataUl dataTable-li tableList-max-height ulHide">
+                        <div class="tableList-more gray" >
+                            更多 <i class="icon-more"></i>
+                        </div>
+                        <div class="tablesListInner">
+                            <li class="data-dataTable-li">
+                                <i class="icon2 tableIcon disable-table-icon dataIcons floatLeft"></i>
+                                <span class="data-name tableName">table1</span>
+                            </li>
+                            <li class="data-dataTable-li">
+                                <i class="icon2  tableIcon disable-table-icon dataIcons floatLeft"></i>
+                                <span class="data-name tableName">table2</span>
+                            </li>
+                            <li class="data-dataTable-li">
+                                <i class="icon2 tableIcon disable-table-icon dataIcons floatLeft"></i>
+                                <span class="data-name tableName">table3</span>
+                            </li>
+                            <li class="data-dataTable-li">
+                                <i class="icon2 tableIcon disable-table-icon dataIcons floatLeft"></i>
+                                <span class="data-name tableName">table1</span>
+                            </li>
+                            <li class="data-dataTable-li">
+                                <i class="icon2  tableIcon disable-table-icon dataIcons floatLeft"></i>
+                                <span class="data-name tableName">table2</span>
+                            </li>
+                            <li class="data-dataTable-li">
+                                <i class="icon2 tableIcon disable-table-icon dataIcons floatLeft"></i>
+                                <span class="data-name tableName">table3</span>
+                            </li>
+                            <li class="data-dataTable-li">
+                                <i class="icon2 tableIcon disable-table-icon dataIcons floatLeft"></i>
+                                <span class="data-name tableName">table1</span>
+                            </li>
+                            <li class="data-dataTable-li">
+                                <i class="icon2  tableIcon disable-table-icon dataIcons floatLeft"></i>
+                                <span class="data-name tableName">table2</span>
+                            </li>
+                            <li class="data-dataTable-li">
+                                <i class="icon2 tableIcon disable-table-icon dataIcons floatLeft"></i>
+                                <span class="data-name tableName">table3</span>
+                            </li>
+                        </div>
+                    </ul>
+                </ul>
+                <div class="dotted-hr-noMargin dotted-hr clearFloat"></div>
+            </ul>
+
+
+            <ul class="dataUl dataSource-li">
+                <li class="data-dataSource-li  dataConnectName">
+                    <i class="connect-icon dataIcons floatLeft"></i>
+                    <span class="data-name sourcesName">connect1</span>
+                </li>
+                <ul class="dataUl dataTable-li ulHide">
+                    <li class="data-dataBase-li">
+                        <i class="icon2 server-icon dataIcons floatLeft"></i>
+                        <span class="data-name sourcesName">Lenovo-kp1</span>
+                        <i class="icon2 toggle-icon dataIcons floatRight toggle-icon-open"></i>
+                    </li>
+                    <ul class="dataUl dataTable-li tableList-max-height ulHide">
+                        <div class="tableList-more gray" >
+                            更多 <i class="icon-more"></i>
+                        </div>
+                        <div class="tablesListInner">
+                            <li class="data-dataTable-li">
+                                <i class="icon2 tableIcon disable-table-icon dataIcons floatLeft"></i>
+                                <span class="data-name tableName">table1</span>
+                            </li>
+                            <li class="data-dataTable-li">
+                                <i class="icon2  tableIcon disable-table-icon dataIcons floatLeft"></i>
+                                <span class="data-name tableName">table2</span>
+                            </li>
+                            <li class="data-dataTable-li">
+                                <i class="icon2 tableIcon disable-table-icon dataIcons floatLeft"></i>
+                                <span class="data-name tableName">table3</span>
+                            </li>
+                        </div>
+                    </ul>
+                </ul>
+                <ul class="dataUl dataTable-li ulHide">
+                    <li class="data-dataBase-li">
+                        <i class="icon2 server-icon dataIcons floatLeft"></i>
+                        <span class="data-name sourcesName">Lenovo-kp1</span>
+                        <i class="icon2 toggle-icon dataIcons floatRight toggle-icon-open"></i>
+                    </li>
+                    <ul class="dataUl dataTable-li tableList-max-height ulHide">
+                        <div class="tableList-more gray" >
+                            更多 <i class="icon-more"></i>
+                        </div>
+                        <div class="tablesListInner">
+                            <li class="data-dataTable-li">
+                                <i class="icon2 tableIcon disable-table-icon dataIcons floatLeft"></i>
+                                <span class="data-name tableName">table1</span>
+                            </li>
+                            <li class="data-dataTable-li">
+                                <i class="icon2  tableIcon disable-table-icon dataIcons floatLeft"></i>
+                                <span class="data-name tableName">table2</span>
+                            </li>
+                            <li class="data-dataTable-li">
+                                <i class="icon2 tableIcon disable-table-icon dataIcons floatLeft"></i>
+                                <span class="data-name tableName">table3</span>
+                            </li>
+                            <li class="data-dataTable-li">
+                                <i class="icon2 tableIcon disable-table-icon dataIcons floatLeft"></i>
+                                <span class="data-name tableName">table1</span>
+                            </li>
+                            <li class="data-dataTable-li">
+                                <i class="icon2  tableIcon disable-table-icon dataIcons floatLeft"></i>
+                                <span class="data-name tableName">table2</span>
+                            </li>
+                            <li class="data-dataTable-li">
+                                <i class="icon2 tableIcon disable-table-icon dataIcons floatLeft"></i>
+                                <span class="data-name tableName">table3</span>
+                            </li>
+                            <li class="data-dataTable-li">
+                                <i class="icon2 tableIcon disable-table-icon dataIcons floatLeft"></i>
+                                <span class="data-name tableName">table1</span>
+                            </li>
+                            <li class="data-dataTable-li">
+                                <i class="icon2  tableIcon disable-table-icon dataIcons floatLeft"></i>
+                                <span class="data-name tableName">table2</span>
+                            </li>
+                            <li class="data-dataTable-li">
+                                <i class="icon2 tableIcon disable-table-icon dataIcons floatLeft"></i>
+                                <span class="data-name tableName">table3</span>
+                            </li>
+                        </div>
+                    </ul>
+                </ul>
+                <div class="dotted-hr-noMargin dotted-hr clearFloat"></div>
+            </ul>
+
+
+
+            <div class="addDataSource  addDataSourcesBtn">
+                <i class="addSource-icon "></i>添加
+            </div>
+        </div>
+        <div class="flex-warp">
+            <div class="flex-icon-open">
+            </div>
+            <!-- <div class="flex-icon-close">
+             </div>-->
+        </div>
+        <div class="col-lg-9 col-md-9 col-sm-9 queryContent">
+            <!--query start-->
+            <div class="query-titleand-tab">
+                <p class="query-content-title">New Query</p>
+                <div class="query-content-tab">
+                    <ul>
+                        <li class="query-content-li query-tab-active" name="data1">
+                            <span class="run-state-icon green"></span><!--green:运行完成的class-->
+                            新建查询1
+                            <span class="run-close-icon"></span>
+                        </li>
+                    </ul>
+                    <div class="tab-add">+</div>
+                </div>
+            </div>
+            <div class="query-content">
+                <div class="">
+                    <div class="query-content-sql">
+                        <textarea id="editor" name="editor" placeholder="请输入sql..."></textarea>
+                    </div>
+
+                    <div class="query-content-btn"><!--btn-danger: sql正在查询时的class-->
+                        <button type="button" class="btn btn-sm btn-query btn-success search-cancel" name="查询">查询</button>
+                        <button type="button" class="btn btn-default btn-sm btn-sfj store">保存</button>
+                        <button type="button" class="btn btn-default btn-sm btn-sfj format">格式化</button>
+                        <button type="button" class="btn btn-default btn-sm btn-sfj job">Job</button>
+                    </div>
+                    <!--结果-->
+                    <div class="line-separ"></div>
+                    <div class="result-content">
+                        <!--结果标题-->
+                        <div class="result-title">
+                            <div class="float-left result-title-name">Results</div><!-- result-load-icon-ok:Results加载完成过时的class-->
+                            <div class="float-left result-load-icon result-load-icon-ok"></div>
+                            <div class="float-left result-load-fail-text" style="color:#ff0000;font-size: 20px;">Failed</div>
+                            <div class="float-left result-load-time">(Start Time:2016-08-18 23:24:24 PST Duration0.16s)</div>
+                            <div class="log-container">
+                                <div class="float-left result-load-icon to-log"></div>
+                                <div class="float-left to-log-text">Log</div>
+                            </div>
+                            <div class="download-btn">
+                                <button type="button" class="float-right btn btn-default btn-sm btn-sfj downloadAll">下载全部</button>
+                                <button type="button" class="float-right btn btn-default btn-sm btn-sfj download">下载</button>
+                            </div>
+                        </div>
+                        <!--日志-->
+                        <div class="log-substance-container">
+                                <pre class="log-substance">log4j.appender.logfile=org.apache.log4j.DailyRollingFileAppender
+log4j.appender.logfile.File=${webapp.root}/WEB-INF/logs/exppower.log
+log4j.appender.logfile.DatePattern=.yyyy-MM-dd
+                                </pre>
+                        </div>
+                        <div class="data-table-container">
+
+                        </div>
+                        <div class="result-table-container">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--query end-->
+        </div>
+    </div>
+
+
+
+
+
+
+
+    <!--add DataSources-->
+    <div class="mask-layout" style="display:none">
+        <div class="report-dialog-ask" >
+            <form id="dialog-form">
+                <div class="report-dialog-ask-heading">
+                    <div class="close-dialog-icon icon"></div>
+                </div>
+                <div class="report-dialog-ask-body">
+                    <div class="report-dialog-ask-body-conent">
+                        <div class="createDataSourceModel">
+                            <div class='dialog-body-header'>添加数据源</div>
+                            <p><span class="form-input-name"><span class="red">*</span>数据源别名:</span><input type="text" class="form-input" required /></p>
+                            <p><span class="form-input-name"><span class="red">*</span>数据源类型:</span><select class="form-input">
+                                <option>
+
+                                </option>
+                            </select> </p>
+                            <p><span class="form-input-name"><span class="red">*</span>数据源URL:</span><input type="text" class="form-input" required/></p>
+                            <p><span class="form-input-name"><span class="red">*</span>数据源Driver:</span><input type="text" class="form-input" required/></p>
+                            <p><span class="form-input-name"><span class="red">*</span>用户名:</span><input type="password" class="form-input" required/></p>
+                            <p><span class="form-input-name"><span class="red">*</span>密码:</span><input type="password" class="form-input" required/></p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="report-dialog-ask-footer overflow-hidden">
+                    <button class="public-btn report-dialog-btn btn-cancel floatLeft">
+                        连接测试
+                    </button>
+                    <button class="public-btn report-dialog-btn btn-cancel floatRight  close-dialog-icon" >
+                        取消
+                    </button>
+                    <button class="public-btn report-dialog-btn btn-save floatRight">
+                        保存
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+
+
+
+
+</main>
+<script type="text/javascript" src="./js/ajaxHandler.js"></script>
+<script type="text/javascript" src="./js/CodeMirror-master/lib/codemirror.js"></script>
+<script type="text/javascript" src="./js/CodeMirror-master/addon/display/placeholder.js"></script>
+<script type="text/javascript" src="./js/CodeMirror-master/addon/hint/show-hint.js"></script>
+<script type="text/javascript" src="./js/CodeMirror-master/addon/hint/sql-hint.js"></script>
+<script type="text/javascript" src="./js/CodeMirror-master/mode/sql/sql.js"></script>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" ?> 
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="QueryRelyJob">
+    <sql id="queryRelyJobColumns">
+        <![CDATA[
+		id,queryId,rely,relyQueryResultVariable,condition
+	    ]]>
+    </sql>
+
+    <insert id="addQueryRelyJob" useGeneratedKeys="true" keyProperty="id">
+        <![CDATA[
+        INSERT INTO priestsql_query_rely_job (
+        	id ,
+        	queryId ,
+        	rely ,
+        	relyQueryResultVariable ,
+        	condition 
+        ) VALUES (
+        	#{id} ,
+        	#{queryId} ,
+        	#{rely} ,
+        	#{relyQueryResultVariable} ,
+        	#{condition} 
+        )
+    ]]>
+    </insert>
+
+    <update id="updateQueryRelyJob" >
+        <![CDATA[
+        UPDATE priestsql_query_rely_job SET
+	        queryId = #{queryId} ,
+	        rely = #{rely} ,
+	        relyQueryResultVariable = #{relyQueryResultVariable} ,
+	        condition = #{condition} 
+        WHERE 
+	        id = #{id} 
+    ]]>
+    </update>
+
+    <delete id="deleteQueryRelyJob">
+        <![CDATA[
+        DELETE FROM priestsql_query_rely_job WHERE
+        id = #{id} 
+    ]]>
+    </delete>
+
+    <select id="getQueryRelyJob" resultType="QueryRelyEntity">
+        SELECT <include refid="queryRelyJobColumns" />
+        <![CDATA[
+		    FROM priestsql_query_rely_job 
+	        WHERE 
+		        id = #{id} 
+	    ]]>
+    </select>
+
+    <sql id="queryRelyJobWhere">
+        <where>
+            <if test="@Ognl@isNotEmpty(id)">
+                AND id = #{id}
+            </if>
+            <if test="@Ognl@isNotEmpty(queryId)">
+                AND queryId = #{queryId}
+            </if>
+            <if test="@Ognl@isNotEmpty(rely)">
+                AND rely = #{rely}
+            </if>
+            <if test="@Ognl@isNotEmpty(relyQueryResultVariable)">
+                AND relyQueryResultVariable = #{relyQueryResultVariable}
+            </if>
+            <if test="@Ognl@isNotEmpty(condition)">
+                AND condition = #{condition}
+            </if>
+        </where>
+    </sql>
+
+    <select id="QueryRelyJob.findPage.count" resultType="long">
+        SELECT count(*) FROM priestsql_query_rely_job
+        <include refid="queryRelyJobWhere"/>
+    </select>
+    
+    <select id="findQueryRelyJobList" resultType="QueryRelyEntity">
+        SELECT <include refid="queryRelyJobColumns" />
+        FROM priestsql_query_rely_job
+        <include refid="queryRelyJobWhere"/>
+
+        <if test="@Ognl@isNotEmpty(sortColumns)">
+            ORDER BY ${sortColumns}
+        </if>
+        limit ${startIndex}, ${pageSize}
+    </select>
+</mapper>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" ?> 
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lenovo.priestsql.web.dao.mapper.QueryHistoryMapper">
+
+     <select id="getQuertHistory" parameterType ="Param" resultType="QueryHistory" >
+        select id,loginName,dbName,connId,`sql`,queryKey,queryCountKey,forBigData , date,queryType,runningState,proxyUser,startDate,finishDate,errorMessage from
+        priestsql_queryHistory where loginName=#{loginName} and date>DATE_SUB(NOW(),INTERVAL 24 HOUR) 
+        <if test="paramString != null">
+            and sql rlike #{paramString}
+        </if>
+        order by date desc
+        limit 20
+     </select>
+     
+    <select id="getQuertHistoryForCleanTask" resultType="QueryHistory" >
+    	SELECT
+    		queryKey,
+			tmpTable,
+			connId,
+			proxyUser
+		FROM
+			priestsql_queryHistory
+		WHERE
+			(
+				queryType = 'H'
+				OR queryType = 'S'
+			)
+		AND tmpTable is not null
+		AND date &lt; DATE_SUB(NOW(),INTERVAL 8 HOUR) 
+	</select>
+    
+    <insert id="saveQueryHistory" parameterType="QueryHistory">
+		insert into priestsql_queryHistory(loginName,dbName,connId,`sql`,queryKey,queryCountKey,forBigData,date,queryType,proxyUser,errorMessage) 
+        values(#{loginName},#{dbName},#{connId},#{sql},#{queryKey},#{queryCountKey},#{forBigData},#{date},#{queryType},#{proxyUser},#{errorMessage})
+    </insert>
+    
+    <update id="updateQueryHistory" parameterType="QueryHistory">
+        update priestsql_queryHistory set runningState=#{runningState} 
+        <if test="forBigData == 1">
+        	,forBigData=#{forBigData}
+        </if>
+        <if test="queryType != null">
+        	, queryType=#{queryType}
+        </if>
+        <if test="startDate != 0">
+        	, startDate=#{startDate}
+        </if>
+        <if test="finishDate != 0">
+        	, finishDate=#{finishDate}
+        </if>
+        <if test="createTmpTable == 1">
+        	, createTmpTable=1
+        </if>
+        <if test="tmpTable != null">
+        	, tmpTable=#{tmpTable}
+        </if>
+         <if test="errorMessage != null">
+        	, errorMessage=#{errorMessage}
+        </if>
+        where queryKey=#{queryKey} 
+    </update>
+    
+    <update id="updateQueryHistoryAfterClean" parameterType="QueryHistory">
+    	update priestsql_queryHistory set  tmpTable=null
+        where queryKey=#{queryKey} 
+    </update>
+    
+    <select id="getQueryState" parameterType ="Param" resultType="int">
+        select ifnull(runningState,-1) runningState from priestsql_queryHistory where queryKey=#{queryKey}
+    </select>
+    
+    <select id="getQuertTime" parameterType ="Param" resultType="QueryHistory" >
+        select  date,startDate,finishDate from
+        priestsql_queryHistory where queryKey=#{queryKey}
+    </select>
+    
+</mapper>

@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8" ?> 
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lenovo.priestsql.schedule.dao.ScheduleDao">
+    <insert id="addJob" parameterType="QueryEntity" useGeneratedKeys="true" keyProperty="id" >
+		insert into priestsql_schedule_job(
+                        `name`,
+                        `sql`,
+                        `variables`,
+                        `datasourceId`,
+                        `proxyUser`,
+                        `owner`,
+                        `cronExpr`,
+                        `createDate`,
+                        `execution`,
+                        `databaseName`,
+                        `executePeriod`,
+                        `isDelete`,
+                        `periodConfig`,
+                        `email`,
+                        `disable`,
+                        `version`,
+                        `latestVersion`,
+                        `description`)
+        values(
+                    #{name},
+                    #{sql},
+                    #{variables},
+                    #{datasourceId},
+                    #{proxyUser},
+                    #{owner},
+                    #{cronExpr},
+                    #{createDate},
+                    #{execution},
+                    #{databaseName},
+                    #{executePeriod},
+                    #{isDelete},
+                    #{periodConfig},
+                    #{email},
+                    #{disable},
+                    #{version},
+                    #{latestVersion},
+                    #{description});
+    </insert>
+    
+    <update id="updateJob" parameterType="QueryEntity" >
+        update priestsql_schedule_job
+        set  `name` = #{name},
+              `sql` = #{sql},
+              `variables` = #{variables},
+              `datasourceId` = #{datasourceId},
+              `proxyUser` = #{proxyUser},
+              `owner` = #{owner},
+              `cronExpr` = #{cronExpr},
+              `createDate` = #{createDate},
+              `execution` = #{execution},
+              `databaseName` = #{databaseName},
+              `executePeriod` = #{executePeriod},
+              `isDelete` = #{isDelete},
+              `periodConfig` = #{periodConfig},
+               `email` = #{email},
+               `disable` = #{disable},
+               `version` = #{version},
+               `latestVersion` = #{latestVersion},
+               `description` = #{description}
+        where id=#{id}
+    </update>
+
+    <delete id="deleteJob" parameterType="int">
+        delete from priestsql_schedule_job where id=#{id}
+    </delete>
+
+    <sql id="queryEntityWhere">
+        <where>
+            <if test="@Ognl@isNotEmpty(id)">
+                AND id = #{id}
+            </if>
+            <if test="@Ognl@isNotEmpty(name)">
+                AND name = #{name}
+            </if>
+            <if test="@Ognl@isNotEmpty(sql)">
+                AND sql = #{sql}
+            </if>
+            <if test="@Ognl@isNotEmpty(variables)">
+                AND variables = #{variables}
+            </if>
+            <if test="@Ognl@isNotEmpty(datasourceId)">
+                AND datasourceId = #{datasourceId}
+            </if>
+            <if test="@Ognl@isNotEmpty(proxyUser)">
+                AND proxyUser = #{proxyUser}
+            </if>
+            <if test="@Ognl@isNotEmpty(owner)">
+                AND owner = #{owner}
+            </if>
+            <if test="@Ognl@isNotEmpty(cronExpr)">
+                AND cronExpr = #{cronExpr}
+            </if>
+            <if test="@Ognl@isNotEmpty(createDateBegin)">
+                AND createDate >= #{createDateBegin}
+            </if>
+            <if test="@Ognl@isNotEmpty(createDateEnd)">
+                AND createDate &lt;= #{createDateEnd}
+            </if>
+            <if test="@Ognl@isNotEmpty(executionBegin)">
+                AND execution >= #{executionBegin}
+            </if>
+            <if test="@Ognl@isNotEmpty(executionEnd)">
+                AND execution &lt;= #{executionEnd}
+            </if>
+            <if test="@Ognl@isNotEmpty(email)">
+                AND email = #{email}
+            </if>
+            <if test="@Ognl@isNotEmpty(disable)">
+                AND disable = #{disable}
+            </if>
+            <if test="@Ognl@isNotEmpty(version)">
+                AND version = #{version}
+            </if>
+            <if test="@Ognl@isNotEmpty(latestVersion)">
+                AND latestVersion = #{latestVersion}
+            </if>
+            <if test="@Ognl@isNotEmpty(description)">
+                AND description = #{description}
+            </if>
+            <if test="@Ognl@isNotEmpty(isDelete)">
+                AND isDelete = #{isDelete}
+            </if>
+            <if test="@Ognl@isNotEmpty(searchKey)">
+                AND name like concat('%', #{searchKey}, '%')
+            </if>
+        </where>
+    </sql>
+
+    <select id="findQueryEntityList" parameterType="map" resultType="QueryEntity">
+        select * from priestsql_schedule_job
+        <include refid="queryEntityWhere"/>
+        <if test="@Ognl@isNotEmpty(sortColumns)">
+            ORDER BY ${sortColumns}
+        </if>
+        limit ${startIndex}, ${pageSize}
+    </select>
+
+    <select id="countQueryEntity" parameterType="map" resultType="int">
+        select count(id) from priestsql_schedule_job t1
+        <include refid="queryEntityWhere"/>
+    </select>
+    
+    <select id="getQueryEntity" parameterType="int" resultType="QueryEntity">
+        select * from priestsql_schedule_job t1
+        where id = #{id}
+    </select>
+
+    <select id="getQueryEntityByCondition" parameterType="map" resultType="QueryEntity">
+        select * from priestsql_schedule_job t1
+        <include refid="queryEntityWhere"/>
+    </select>
+</mapper>

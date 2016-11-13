@@ -1,0 +1,136 @@
+body {
+    background-color: #fff;
+    font-size: 14px;
+    color:#fff;
+}
+/*-----nav----*/
+.header{
+    height:60px;
+}
+.logo-img{
+    float: right;
+    margin-top: 18px;
+}
+.nav>li>a{
+    color: #8a8e8e;
+}
+.nav>li>a:hover{
+    background: transparent;
+}
+.loginError{
+    color:red;
+}
+/*-----nav----*/
+/*----login----*/
+.banner{
+    width: 100%;
+    height: 600px;
+    background: url("../images/login/banner_bg.png") 0 0 no-repeat;
+    background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+}
+#FormLogin .form-group{
+    text-align: left;
+}
+label.loginError, .loginFailed{
+    margin-top:5px;
+}
+.red-font{
+    color:red;
+}
+.form-signin>img{
+    margin: 50px;
+}
+.form-group{
+    margin-bottom: 30px;
+    height: 52px;
+}
+.icon{
+    width: 20px;
+    height: 26px;
+    float:left;
+}
+.username_icon{
+    background: url("../images/login/icon_username.png") 0 0 no-repeat;
+}
+.password_icon{
+    margin-top: -4px;
+    background: url("../images/login/icon_password.png") 0 0 no-repeat;
+}
+.input-group{
+    width:100%;
+    height:auto;
+    padding: 10px;
+    background: rgba(255,255,255,0.4);
+    border: 1px solid rgba(255,255,255,0.5);
+}
+.input-group span{
+    float:left;
+    color: #fff;
+    margin-left: 10px;
+    font-size: 16px;
+}
+
+.form-signin {
+    max-width: 400px;
+    margin: 0 auto;
+    background: transparent;
+    text-align: center;
+    font-family: "微软雅黑";
+}
+#FormLoginBtn{
+    /*font-weight:700*/
+}
+.form-signin .form-control {
+    position: relative;
+    height: auto;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    font-size: 16px;
+    width: 80%;
+    background: transparent;
+    color: #FFF;
+    margin-left: 1rem;
+    padding: 0 8px;
+    outline: none;
+    border-color: transparent;
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+}
+.form-control:focus{
+    outline: none;
+    border-color: transparent;
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+}
+.btn{
+    margin-top: 40px;
+    color: #fff;
+    width: 100%;
+    height:50px;
+    font-size: 20px;
+    background: url('../images/login/sign_in_btn.png') 0 0 no-repeat;
+}
+.btn:hover{
+    color: #fff;
+    background: url('../images/login/sign_in_hover.png') 0 0 no-repeat;
+}
+.copyright{
+    margin-top: 35px;
+    text-align: center;
+    color: #8a8e8e;
+}
+
+.form-signin .form-control::-webkit-input-placeholder{ /* WebKit browsers */
+    color:#fff;
+}
+.form-signin .form-control:-moz-placeholder{ /* Mozilla Firefox 4 to 18 */
+    color:#fff;
+}
+.form-signin .form-control::-moz-placeholder{ /* Mozilla Firefox 19+ */
+    color:#fff;
+}
+.form-signin .form-control:-ms-input-placeholder{ /* Internet Explorer 10+ */
+    color:#fff;
+}
+

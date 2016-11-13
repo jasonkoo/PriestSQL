@@ -1,0 +1,165 @@
+/*===========mask public============*/
+.mask {
+    display: none;
+}
+
+.mask .container {
+    width: 100%;
+    background: #FFF;
+}
+
+.btn:focus,
+.btn:active:focus {
+    outline: none;
+}
+
+/*===========mask public end============*/
+/*==========query history and save query======*/
+.mask .item-head {
+    height: 40px;
+    padding-left: 20px;
+    margin-top: 20px;
+}
+
+.mask .resultTable {
+    height: 400px;
+    overflow: auto;
+    width: 100%;
+}
+
+.mask .item-head-blue {
+    float: left;
+    width: 5px;
+    height: 18px;
+    margin-top: 10px;
+    background: #50C7A1;
+}
+
+.mask .item-head-body {
+    height: 40px;
+    padding: 8px 0 0 15px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #353740;
+}
+
+.content {
+    background: #FFF;
+    margin-left: 300px
+}
+
+.mask .table_container {
+    margin-top: 60px;
+}
+
+.mask .table_div {
+    padding: 10px 20px;
+}
+
+.mask .table > thead > tr > th:first-child,
+.mask .table > tbody > tr > td:first-child {
+    text-align: left;
+}
+
+.mask .table > thead > tr > th:not(:first-child),
+.mask .table > tbody > tr > td:not(:first-child) {
+    text-align: center;
+}
+
+#myQueryList .table > thead > tr > th,
+#myQueryList .table > thead > tr > td {
+    /*text-align: center;*/
+}
+
+.mask .icon {
+    width: 14px;
+    height: 14px;
+    margin: 3px 5px;
+}
+
+.mask .icon.icon_normal {
+    background: url("../images/mask/icon_normal.png") 0 0 no-repeat;
+}
+
+.mask .icon.icon_abnormal {
+    background: url("../images/mask/icon_abnormal.png") 0 0 no-repeat;
+}
+.mask .icon.icon_running{
+    width: 16px;
+    height: 16px;
+    background: url("../images/loading_GIF.gif") 0 0 no-repeat;
+}
+.icon.icon_running{
+    width: 16px;
+    height: 16px;
+    background: url("../images/loading_GIF.gif") 0 0 no-repeat;
+}
+.mask .icon.icon_cancel{
+    background: url("../images/mask/icon_cancel.png") 0 0 no-repeat;
+}
+
+.mask tr .btn {
+    margin: 0 10px;
+    background: #EFEFEF;
+    /*font-weight: bold;*/
+    padding: 3px 15px;
+}
+
+.mask tr .btn:hover {
+    background: #3BB064;
+    color: #fff;
+    border-color: #fff;
+}
+
+/*==========query history and save query end======*/
+
+/*========delete and save=======*/
+.mask .delete_box {
+    width: 540px;
+    height: 250px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    background: #f3f3f3;
+    margin-top: -125px;
+    margin-left: -270px;
+}
+
+.mask .warn {
+    color: #f26746;
+}
+
+.mask .btn_group {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 60px;
+    background: #e2e2e2;
+    padding: 10px 0;
+}
+
+.mask .btn-sure {
+    margin-right: 10px
+}
+
+.mask .btn-closed {
+    cursor: pointer;
+}
+
+/*========delete and save end=======*/
+/*
+.table-fixed-header {
+    position: fixed;
+    top:430px;
+    z-index: 1020;
+    border-bottom: 1px solid #d5d5d5;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    -webkit-box-shadow: inset 0 1px 0 #fff, 0 1px 5px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: inset 0 1px 0 #fff, 0 1px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: inset 0 1px 0 #fff, 0 1px 5px rgba(0, 0, 0, 0.1);
+    !* IE6-9 *!
+    filter: progid: DXImageTransform.Microsoft.gradient(enabled=false);
+}
+*/

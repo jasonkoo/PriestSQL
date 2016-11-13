@@ -1,0 +1,407 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+<configuration>
+	<property>
+		<name>webapp.server.threadpool.core.size</name>
+		<value>32</value>
+		<description></description>
+	</property>
+
+	<property>
+		<name>webapp.server.threadpool.max.size</name>
+		<value>64</value>
+		<description></description>
+	</property>
+
+	<property>
+		<name>webapp.server.bind.host</name>
+		<value>0.0.0.0</value>
+		<description></description>
+	</property>
+
+	<property>
+		<name>webapp.server.bind.httpport</name>
+		<value>9796</value>
+		<description></description>
+	</property>
+
+	<property>
+		<name>webapp.server.web.resources.dir</name>
+		<value>src/main/webapp</value>
+		<description></description>
+	</property>
+
+	<property>
+		<name>task.handle.thread.core.count</name>
+		<value>16</value>
+		<description></description>
+	</property>
+
+	<property>
+		<name>task.handle.thread.max.count</name>
+		<value>16</value>
+		<description></description>
+	</property>
+
+	<property>
+		<name>wait.running.tasks.completed</name>
+		<value>false</value>
+		<description></description>
+	</property>
+
+	<property>
+		<name>wait.all.tasks.completed</name>
+		<value>false</value>
+		<description></description>
+	</property>
+
+	<property>
+		<name>store.waiting.task.when.taskserver.stop</name>
+		<value>false</value>
+		<description></description>
+	</property>
+
+	<property>
+		<name>jmx.enable</name>
+		<value>true</value>
+		<description></description>
+	</property>
+
+	<property>
+		<name>jmx.server.bind.host</name>
+		<value>0.0.0.0</value>
+		<description></description>
+	</property>
+
+	<property>
+		<name>jmx.server.bind.port</name>
+		<value>9798</value>
+		<description></description>
+	</property>
+
+	<property>
+		<name>jmx.httpadaptor.auth.method</name>
+		<value>basic</value>
+		<description></description>
+	</property>
+
+	<property>
+		<name>jmx.httpadaptor.username</name>
+		<value>priestsql</value>
+		<description></description>
+	</property>
+
+	<property>
+		<name>jmx.httpadaptor.password</name>
+		<value>priestsql</value>
+		<description></description>
+	</property>
+
+	<property>
+		<name>schedule.enable</name>
+		<value>true</value>
+		<description></description>
+	</property>
+
+	<property>
+		<name>org.quartz.scheduler.instanceName</name>
+		<value>PRIESTSQL</value>
+		<description></description>
+	</property>
+
+	<property>
+		<name>org.quartz.scheduler.instanceId</name>
+		<value>PRIESTSQL</value>
+		<description></description>
+	</property>
+
+	<property>
+		<name>org.quartz.job.group.name</name>
+		<value>PRIESTSQL</value>
+		<description></description>
+	</property>
+
+	<property>
+		<name>org.quartz.scheduler.instanceIdGenerator.class</name>
+		<value>org.quartz.simpl.SimpleInstanceIdGenerator</value>
+		<description></description>
+	</property>
+
+	<property>
+		<name>org.quartz.scheduler.threadName</name>
+		<value>QUARTZ_SCHEDULER</value>
+		<description></description>
+	</property>
+
+	<property>
+		<name>org.quartz.threadPool.class</name>
+		<value>com.lenovo.priestsql.scheduler.SchedulerThreadPool</value>
+		<description></description>
+	</property>
+
+	<property>
+		<name>org.quartz.threadPool.core</name>
+		<value>4</value>
+		<description></description>
+	</property>
+
+	<property>
+		<name>org.quartz.threadPool.max</name>
+		<value>4</value>
+		<description></description>
+	</property>
+
+	<property>
+		<name>org.quartz.jobStore.class</name>
+		<value>org.quartz.impl.jdbcjobstore.JobStoreTX</value>
+		<description></description>
+	</property>
+
+	<property>
+		<name>org.quartz.jobStore.useProperties</name>
+		<value>false</value>
+		<description></description>
+	</property>
+
+	<property>
+		<name>org.quartz.jobStore.misfireThreshold</name>
+		<value>300000</value>
+		<description></description>
+	</property>
+
+	<property>
+		<name>org.quartz.jobStore.isClustered</name>
+		<value>true</value>
+		<description></description>
+	</property>
+
+	<property>
+		<name>org.quartz.jobStore.driverDelegateClass</name>
+		<value>org.quartz.impl.jdbcjobstore.StdJDBCDelegate</value>
+		<description></description>
+	</property>
+
+	<property>
+		<name>org.quartz.jobStore.dataSource</name>
+		<value>priestsql</value>
+		<description></description>
+	</property>
+
+	<property>
+		<name>org.quartz.dataSource.priestsql.driver</name>
+		<value>com.mysql.jdbc.Driver</value>
+		<description></description>
+	</property>
+
+	<property>
+		<name>org.quartz.dataSource.priestsql.URL</name>
+		<value>jdbc:mysql://10.0.64.52:3306/priestsql_independent?autoReconnect=true&amp;useUnicode=true&amp;characterEncoding=UTF-8</value>
+		<description></description>
+	</property>
+
+	<property>
+		<name>org.quartz.dataSource.priestsql.user</name>
+		<value>u_duty</value>
+		<description></description>
+	</property>
+
+	<property>
+		<name>org.quartz.dataSource.priestsql.password</name>
+		<value>System_12345</value>
+		<description></description>
+	</property>
+
+	<property>
+		<name>org.quartz.dataSource.priestsql.maxConnections</name>
+		<value>20</value>
+		<description></description>
+	</property>
+
+	<property>
+		<name>wait.quartz.scheduler.tasks.completed</name>
+		<value>false</value>
+		<description></description>
+	</property>
+
+	<property>
+		<name>allow.query.results.write.to.loacl.dir</name>
+		<value>false</value>
+		<description></description>
+	</property>
+
+	<property>
+		<name>datasource.login.timeout</name>
+		<value>10</value>
+		<description></description>
+	</property>
+
+	<property>
+		<name>datasource.main.url</name>
+		<value>jdbc:mysql://10.0.64.52:3306/priestsql_independent?autoReconnect=true&amp;useUnicode=true&amp;characterEncoding=UTF-8</value>
+		<description></description>
+	</property>
+
+	<property>
+		<name>datasource.main.driver</name>
+		<value>com.mysql.jdbc.Driver</value>
+		<description></description>
+	</property>
+
+	<property>
+		<name>datasource.main.username</name>
+		<value>u_duty</value>
+		<description></description>
+	</property>
+
+	<property>
+		<name>datasource.main.password</name>
+		<value>System_12345</value>
+		<description></description>
+	</property>
+
+	<property>
+		<name>datasource.leapid.url</name>
+		<value>jdbc:mysql://10.0.87.14:3306/leapid?characterEncoding=UTF-8</value>
+		<description></description>
+	</property>
+
+	<property>
+		<name>datasource.leapid.driver</name>
+		<value>com.mysql.jdbc.Driver</value>
+		<description></description>
+	</property>
+
+	<property>
+		<name>datasource.leapid.username</name>
+		<value>leapid_db</value>
+		<description></description>
+	</property>
+
+	<property>
+		<name>datasource.leapid.password</name>
+		<value>123456</value>
+		<description></description>
+	</property>
+
+	<property>
+		<name>redis.host</name>
+		<value>10.0.64.84</value>
+		<description></description>
+	</property>
+
+	<property>
+		<name>redis.port</name>
+		<value>6380</value>
+		<description></description>
+	</property>
+
+	<property>
+		<name>redis.maxIdle</name>
+		<value>25</value>
+		<description></description>
+	</property>
+
+	<property>
+		<name>redis.maxTotal</name>
+		<value>200</value>
+		<description></description>
+	</property>
+
+	<property>
+		<name>redis.maxWait</name>
+		<value>1000</value>
+		<description></description>
+	</property>
+
+	<property>
+		<name>redis.expirtime</name>
+		<value>86400</value>
+		<description></description>
+	</property>
+
+	<property>
+		<name>query.limit</name>
+		<value>1000</value>
+		<description></description>
+	</property>
+
+	<property>
+		<name>query.limit.big</name>
+		<value>100000</value>
+		<description></description>
+	</property>
+
+	<property>
+		<name>hive.strict</name>
+		<value>true</value>
+		<description></description>
+	</property>
+
+	<property>
+		<name>use.hadoop.configuration</name>
+		<value>true</value>
+		<description>if use.configuration is 'true',hdfs.root.uri will not be used,system will load core-site.xml and  hdfs-site.xml</description>
+	</property>
+
+	<property>
+		<name>hadoop.core.site</name>
+		<value>/etc/hadoop/conf/core-site.xml</value>
+		<description></description>
+	</property>
+	
+	<property>
+		<name>hadoop.hdfs.site</name>
+		<value>/etc/hadoop/conf/hdfs-site.xml</value>
+		<description></description>
+	</property>
+
+	<property>
+		<name>hdfs.root.uri</name>
+		<value>hdfs://avatarcluster/</value>
+		<description></description>
+	</property>
+
+	<property>
+		<name>kerberos.auth.enabled</name>
+		<value>true</value>
+		<description></description>
+	</property>
+
+	<property>
+		<name>kerberos.realm.file</name>
+		<value>yarn/spark9.lenovomm2.com@LENOVOMM2.COM</value>
+		<description></description>
+	</property>
+
+	<property>
+		<name>kerberos.realm.query</name>
+		<value>priest/spark2.lenovomm2.com@LENOVOMM2.COM</value>
+		<description></description>
+	</property>
+
+	<property>
+		<name>kerberos.keytab.filepath.file</name>
+		<value>/home/priestAdmin/keytabs/yarn.keytab</value>
+		<description></description>
+	</property>
+
+
+	<property>
+		<name>kerberos.keytab.filepath.query</name>
+		<value>/home/priestAdmin/keytabs/priest.keytab</value>
+		<description></description>
+	</property>
+
+	<property>
+		<name>file.save.path</name>
+		<value>/home/priestAdmin/priestsql/downloadFiles</value>
+		<description></description>
+	</property>
+	
+	<property>
+		<name>language</name>
+		<value>zh</value>
+		<description></description>
+	</property>
+
+</configuration>

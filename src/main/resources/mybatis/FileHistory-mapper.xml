@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?> 
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lenovo.priestsql.web.dao.mapper.FileHistoryMapper">
+
+     <select id="getFileHistory" parameterType ="Param" resultType="FileHistory" >
+        select id,loginName,targetPath,operatType,result,proxyUser,date from
+        priestsql_fileHistory where loginName=#{loginName} and date>DATE_SUB(NOW(),INTERVAL 24 HOUR) 
+        <if test="paramString != null">
+            and targetPath rlike #{paramString}
+        </if>
+        order by date desc
+        limit 20
+    </select>
+    
+    <insert id="saveFileHistory" parameterType="FileHistory">
+		insert into priestsql_fileHistory(loginName,targetPath,operatType,result,proxyUser,date) 
+        values(#{loginName},#{targetPath},#{operatType},#{result},#{proxyUser},NOW())
+    </insert>
+    
+</mapper>

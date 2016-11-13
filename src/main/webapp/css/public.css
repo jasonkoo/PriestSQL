@@ -1,0 +1,103 @@
+/*public css style*/
+body {
+    /*font-family: PingFangSC-Light,'helvetica neue','hiragino sans gb',arial,'microsoft yahei ui','microsoft yahei',simsun,sans-serif;*/
+    font-family: "微软雅黑",arial,'microsoft yahei ui',simsun,sans-serif;
+    font-size:14px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.overflow-hidden {
+    overflow: hidden;
+}
+
+.floatLeft {
+    float: left;
+}
+
+.marTopBot {
+    margin: 15px 0px;
+}
+
+.noMargin {
+    margin: 0px !important;
+}
+
+.noPadding {
+    padding: 0px;
+}
+
+.disabledIcon {
+    color: #ddd;
+}
+
+.clearFloat {
+    clear: both;
+}
+
+.marginTopBtn10 {
+    margin: 10px 0px;
+}
+
+.marginRight10 {
+    margin-right: 10px;
+}
+
+.halfWidth {
+    width: 48%;
+}
+
+.allInputClass {
+    border: 1px solid #dddddd;
+    position: relative;
+    height: 30px;
+    width: 100%;
+    line-height: 30px;
+    padding-left: 5px;
+}
+
+input {
+    border: 1px solid #dddddd;
+}
+
+/*horizon-line */
+.horizon-line {
+    border-top: 1px dotted #dddddd;
+    margin: 10px 0px;
+}
+.floatRight{
+    float: right;
+}
+
+/*all btn public*/
+.public-btn {
+    padding: 5px 20px;
+    border: none;
+    margin: 5px 10px;
+    color:#404040;
+}
+.displayNone{
+    display: none;
+}
+input::-webkit-input-placeholder {
+    color: #D2D4D5;
+}
+
+:-moz-placeholder {
+    color:#D2D4D5;
+}
+
+::-moz-placeholder {
+    color: #D2D4D5;
+}
+
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 1000px rgba(0, 0, 0, 0) inset;
+}
+
+
+
+
+
